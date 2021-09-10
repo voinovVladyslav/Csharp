@@ -6,12 +6,9 @@ namespace ClassTask
     {
         static void Main()
         {
-            Human tom = new Human("Tom","Hohland",54,"USA","New York","Khreshatyk",14);
-            tom.Show();
+            Human person = new Human("Tom","Hohland",54,"USA","New York","Khreshatyk",14);
+            person.Show();
 
-            Student valera = new Student();
-            valera.Show();
-            
         }
     }
 }

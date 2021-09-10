@@ -9,16 +9,16 @@ namespace ClassTask
         private string name;
         private string surname;
         private int age;
-       
-        private Adress _adress = new Adress();
+        private Adress adress = new Adress();
+
         public string Name { set; get; }
         public string Surname { set; get; }
         public int Age { set; get; }
 
-        public Human() { name = "Unknown"; surname = "Unknown"; }
+        public Human() {}
 
-        public Human(string Name, string Surname, int Age, string Country, string City, string Street, int HouseNumber) { name = Name; surname = Surname; age = Age; _adress.ChangeAdress(Country, City, Street, HouseNumber); }
+        public Human(string Name, string Surname, int Age, string Country, string City, string Street, int HouseNumber) { name = Name; surname = Surname; age = Age; adress.Change(Country, City, Street, HouseNumber); }
 
-        public void Show() { Console.WriteLine("Name: {0}\nSurname: {1}\nAge: {2}\n", this.Name, this.Surname, this.Age); _adress.Show(); }
+        public void Show() { Console.WriteLine("Name: {0}\nSurname: {1}\nAge: {2}\n", this.name, this.surname, this.age); adress.Show(); }
     }
 }
