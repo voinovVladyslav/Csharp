@@ -7,29 +7,30 @@ namespace ClassTask
     class Student : Human
     {
         private int averageMarks;
-        private Marks status;
+        private Marks rating;
         Random number = new Random();
         public float AverageMarksF { set; get; }
 
         public Student(string Name, string Surname, int Age, string Country, string City, string Street, int HouseNumber) : base(Name, Surname, Age, Country, City, Street, HouseNumber)
         {
+            
             averageMarks = number.Next(1, 6);
             switch (averageMarks)
             {
                 case 1:
-                    status = Marks.VeryBad;
+                    rating = Marks.VeryBad;
                     break;
                 case 2:
-                    status = Marks.Bad;
+                    rating = Marks.Bad;
                     break;
                 case 3:
-                    status = Marks.Normal;
+                    rating = Marks.Normal;
                     break;
                 case 4:
-                    status = Marks.Good;
+                    rating = Marks.Good;
                     break;
                 case 5:
-                    status = Marks.Excellent;
+                    rating = Marks.Excellent;
                     break;
             }
         }
@@ -39,23 +40,23 @@ namespace ClassTask
             switch (averageMarks)
             {
                 case 1:
-                    status = Marks.VeryBad;
+                    rating = Marks.VeryBad;
                     break;
                 case 2:
-                    status = Marks.Bad;
+                    rating = Marks.Bad;
                     break;
                 case 3:
-                    status = Marks.Normal;
+                    rating = Marks.Normal;
                     break;
                 case 4:
-                    status = Marks.Good;
+                    rating = Marks.Good;
                     break;
                 case 5:
-                    status = Marks.Excellent;
+                    rating = Marks.Excellent;
                     break;
             }
         }
-        public void Info() { this.Show(); Console.WriteLine("Average marks: {0}\nStatus: {1}\n", this.averageMarks, this.status); }
+        public void InfoStudent() { this.Show(); Console.WriteLine("Average marks: {0}\nRating: {1}\n", this.averageMarks, this.rating); }
         
         enum Marks
         {
