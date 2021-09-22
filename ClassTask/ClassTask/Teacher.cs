@@ -13,14 +13,14 @@ namespace ClassTask
 
         public int Limit { set; get; }
         public Teacher(string Name, string Surname, int Age, string Country, string City, string Street, int HouseNumber, int Limit) : base(Name, Surname, Age, Country, City, Street, HouseNumber) { limit = Limit; limitCounter = 0; students = new List<Student>(Limit); }
-        public void InfoTeacher() 
+        public override void Info() 
         { 
-            this.Show();
+            base.Info();
             Console.WriteLine("Max students: {0}",this.limit);
             Console.WriteLine("Students under wing:{0}", this.limitCounter);
             foreach (Student i in students) 
             {
-                i.InfoStudent();
+                i.Info();
             }
         }
         public void AddStudent(Student student) { if (limitCounter < limit) { students.Insert(0, student); limitCounter++; Console.WriteLine("Succsesfuly added student"); } else Console.WriteLine("Students limit!"); }

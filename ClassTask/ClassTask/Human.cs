@@ -19,6 +19,6 @@ namespace ClassTask
 
         public Human(string Name, string Surname, int Age, string Country, string City, string Street, int HouseNumber) { name = Name; surname = Surname; age = Age; adress.Change(Country, City, Street, HouseNumber); }
 
-        public void Show() { Console.WriteLine("Name: {0}\nSurname: {1}\nAge: {2}\n", this.name, this.surname, this.age); adress.Show(); }
+        public virtual void Info() { Console.WriteLine("Name: {0}\nSurname: {1}\nAge: {2}\n", this.name, this.surname, this.age); adress.Show(); }
     }
 }

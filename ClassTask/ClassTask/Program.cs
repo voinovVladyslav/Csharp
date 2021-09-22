@@ -13,9 +13,9 @@ namespace ClassTask
 
             valera.AddStudent(pasha);
             valera.AddStudent(slava);
-            valera.InfoTeacher();
+            valera.Info();
             valera.RemoveStudent(pasha);
-            valera.InfoTeacher();
+            valera.Info();
             Console.WriteLine("Choose what to do:\n " +
                 "1. Add student \n" +
                 "2." +
@@ -24,9 +24,10 @@ namespace ClassTask
                 "5." +
                 "6." +
                 "7.");
-            int control = int.Parse(Console.ReadLine());
+            int control = 1;
             while (control != 0)
             {
+                control = int.Parse(Console.ReadLine());
                 switch (control)
                 {
                     case 0:
