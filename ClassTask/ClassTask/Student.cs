@@ -9,7 +9,7 @@ namespace ClassTask
         private int averageMarks;
         private Marks rating;
         Random number = new Random();
-        public float AverageMarks { set; get; }
+        public int AverageMarks { set; get; }
 
         public Student(string Name, string Surname, int Age, string Country, string City, string Street, int HouseNumber) : base(Name, Surname, Age, Country, City, Street, HouseNumber)
         {
@@ -56,8 +56,22 @@ namespace ClassTask
                     break;
             }
         }
-        public override void Info() { base.Info(); Console.WriteLine("Average marks: {0}\nRating: {1}\n", this.averageMarks, this.rating); }
-        
+        public override void Info() 
+        {
+            base.Info(); 
+            Console.WriteLine("Average marks: {0}\nRating: {1}\n", this.averageMarks, this.rating);
+        }
+
+        public static bool operator <(Student s1, Student s2) 
+        {
+            return s1.averageMarks < s2.averageMarks;
+        }
+
+        public static bool operator >(Student s1, Student s2)
+        {
+            return s1.averageMarks > s2.averageMarks;
+        }
+
         enum Marks
         {
             Excellent,

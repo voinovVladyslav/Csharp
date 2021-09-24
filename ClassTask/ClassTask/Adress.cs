@@ -17,7 +17,13 @@ namespace ClassTask
         public int HouseNumber { set; get; }
 
         public Adress() {}
-        public void Change(string Country, string City, string Street, int HouseNumber) { country = Country; city = City; street = Street; houseNumber = HouseNumber; }
+        public void Change(string Country, string City, string Street, int HouseNumber) 
+        { 
+            country = Country;
+            city = City;
+            street = Street;
+            houseNumber = HouseNumber;
+        }
 
         public void Show() { Console.WriteLine("Country: {0}\nCity: {1}\nStreet: {2}\nHouse number: {3}\n", this.country, this.city, this.street, this.houseNumber); }
     }

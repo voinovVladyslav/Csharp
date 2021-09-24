@@ -51,6 +51,8 @@ namespace ClassTask
                     case 6:
 
                         break;
+                    default:
+                        break;
 
                 }
             }
