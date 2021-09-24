@@ -49,6 +49,16 @@ namespace ClassTask
             adress.Change(Country, City, Street, HouseNumber); 
         }
 
-        public virtual void Info() { Console.WriteLine("Name: {0}\nSurname: {1}\nAge: {2}\n", this.name, this.surname, this.age); adress.Show(); }
+        public virtual void Info() 
+        { 
+            Console.WriteLine("Name: {0}\nSurname: {1}\nAge: {2}\n", this.name, this.surname, this.age);
+            adress.Show();
+        }
+
+        public void Introduction()
+        {
+            Console.WriteLine(name + " " + surname);
+        }
+
     }
 }

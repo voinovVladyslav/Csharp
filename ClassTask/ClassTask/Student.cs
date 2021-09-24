@@ -13,7 +13,7 @@ namespace ClassTask
 
         public Student(string Name, string Surname, int Age, string Country, string City, string Street, int HouseNumber) : base(Name, Surname, Age, Country, City, Street, HouseNumber)
         {
-            
+
             averageMarks = number.Next(1, 6);
             switch (averageMarks)
             {
@@ -34,7 +34,7 @@ namespace ClassTask
                     break;
             }
         }
-        public Student(string Name, string Surname, int Age, string Country, string City, string Street, int HouseNumber, int Mark ) : base(Name, Surname, Age, Country, City, Street, HouseNumber)
+        public Student(string Name, string Surname, int Age, string Country, string City, string Street, int HouseNumber, int Mark) : base(Name, Surname, Age, Country, City, Street, HouseNumber)
         {
             averageMarks = Mark;
             switch (averageMarks)
@@ -56,13 +56,13 @@ namespace ClassTask
                     break;
             }
         }
-        public override void Info() 
+        public override void Info()
         {
-            base.Info(); 
+            base.Info();
             Console.WriteLine("Average marks: {0}\nRating: {1}\n", this.averageMarks, this.rating);
         }
 
-        public static bool operator <(Student s1, Student s2) 
+        public static bool operator <(Student s1, Student s2)
         {
             return s1.averageMarks < s2.averageMarks;
         }
@@ -72,13 +72,5 @@ namespace ClassTask
             return s1.averageMarks > s2.averageMarks;
         }
 
-        enum Marks
-        {
-            Excellent,
-            Good,
-            Normal,
-            Bad,
-            VeryBad
-        }
     }
 }

@@ -28,6 +28,7 @@ namespace ClassTask
                 i.Info();
             }
         }
+        
         public void AddStudent(Student student) 
         { 
             if (limitCounter < limit) 

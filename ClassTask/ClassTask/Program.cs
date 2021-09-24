@@ -6,56 +6,58 @@ namespace ClassTask
     {
         static void Main()
         {
-            Student pasha = new Student("Pavel", "Gnom", 19, "Ukraine", "Kherson", "Nekrasova", 21);
-            Student slava = new Student("Slava", "Bortnik", 18, "Ukraine", "Kherson", "John Govard", 76, 5);
+            TeachersList list = new TeachersList();
 
-            Teacher valera = new Teacher("Valera", "Bull", 19, "Ukraine", "Kherson", "Ushakova", 122, 4);
+            list.AddTeacher("Sasha", "Rook", 26, "Ukraine", "Kherson", "Ushakova", 13, 5);
+            list.AddTeacher("Slava", "Groomer", 63, "Ukraine", "Kherson", "Nekrasova", 44, 6);
+            
+            list.Info();
 
-            valera.AddStudent(pasha);
-            valera.AddStudent(slava);
-            valera.Info();
-            valera.RemoveStudent(pasha);
-            valera.Info();
-            Console.WriteLine("Choose what to do:\n " +
-                "1. Add student \n" +
-                "2." +
-                "3." +
-                "4." +
-                "5." +
-                "6." +
-                "7.");
-            int control = 1;
-            while (control != 0)
-            {
-                control = int.Parse(Console.ReadLine());
-                switch (control)
-                {
-                    case 0:
+            list.RemoveTeacher("Rook");
 
-                        break;
-                    case 1:
+            list.Info();
+            /*
+             Console.WriteLine("Choose what to do:\n " +
+                 "1. Add student \n" +
+                 "2." +
+                 "3." +
+                 "4." +
+                 "5." +
+                 "6." +
+                 "7.");
+             int control = 1;
+             while (control != 0)
+             {
+                 control = int.Parse(Console.ReadLine());
+                 switch (control)
+                 {
+                     case 0:
 
-                        break;
-                    case 2:
+                         break;
+                     case 1:
 
-                        break;
-                    case 3:
+                         break;
+                     case 2:
 
-                        break;
-                    case 4:
+                         break;
+                     case 3:
 
-                        break;
-                    case 5:
+                         break;
+                     case 4:
 
-                        break;
-                    case 6:
+                         break;
+                     case 5:
 
-                        break;
-                    default:
-                        break;
+                         break;
+                     case 6:
 
-                }
-            }
+                         break;
+                     default:
+                         break;
+
+                 }
+             }
+             */
         }
     }
 }
