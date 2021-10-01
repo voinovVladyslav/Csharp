@@ -9,11 +9,14 @@ namespace ClassTask
             TeachersList list = new TeachersList();
 
             list.AddTeacher("Sasha", "Rook", 26, "Ukraine", "Kherson", "Ushakova", 13, 5);
-            list.AddTeacher("Slava", "Groomer", 63, "Ukraine", "Kherson", "Nekrasova", 44, 6);
+            Teacher t = new Teacher("Slava", "Groomer", 63, "Ukraine", "Kherson", "Nekrasova", 44, 6);
+            
+            list.AddTeacher(t);
             
             list.Info();
 
-            list.RemoveTeacher("Rook");
+            list.RemoveTeacher(t);
+            list.RemoveTeacher("Sasha","Rook");
 
             list.Info();
             /*
