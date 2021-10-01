@@ -1,0 +1,14 @@
+F:\Programs\C#\NumberGame\NumberGame\NumberGame\bin\Debug\netcoreapp3.1\NumberGame.exe
+F:\Programs\C#\NumberGame\NumberGame\NumberGame\bin\Debug\netcoreapp3.1\NumberGame.deps.json
+F:\Programs\C#\NumberGame\NumberGame\NumberGame\bin\Debug\netcoreapp3.1\NumberGame.runtimeconfig.json
+F:\Programs\C#\NumberGame\NumberGame\NumberGame\bin\Debug\netcoreapp3.1\NumberGame.runtimeconfig.dev.json
+F:\Programs\C#\NumberGame\NumberGame\NumberGame\bin\Debug\netcoreapp3.1\NumberGame.dll
+F:\Programs\C#\NumberGame\NumberGame\NumberGame\bin\Debug\netcoreapp3.1\NumberGame.pdb
+F:\Programs\C#\NumberGame\NumberGame\NumberGame\obj\Debug\netcoreapp3.1\NumberGame.csproj.AssemblyReference.cache
+F:\Programs\C#\NumberGame\NumberGame\NumberGame\obj\Debug\netcoreapp3.1\NumberGame.GeneratedMSBuildEditorConfig.editorconfig
+F:\Programs\C#\NumberGame\NumberGame\NumberGame\obj\Debug\netcoreapp3.1\NumberGame.AssemblyInfoInputs.cache
+F:\Programs\C#\NumberGame\NumberGame\NumberGame\obj\Debug\netcoreapp3.1\NumberGame.AssemblyInfo.cs
+F:\Programs\C#\NumberGame\NumberGame\NumberGame\obj\Debug\netcoreapp3.1\NumberGame.csproj.CoreCompileInputs.cache
+F:\Programs\C#\NumberGame\NumberGame\NumberGame\obj\Debug\netcoreapp3.1\NumberGame.dll
+F:\Programs\C#\NumberGame\NumberGame\NumberGame\obj\Debug\netcoreapp3.1\NumberGame.pdb
+F:\Programs\C#\NumberGame\NumberGame\NumberGame\obj\Debug\netcoreapp3.1\NumberGame.genruntimeconfig.cache
