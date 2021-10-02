@@ -11,13 +11,13 @@ namespace ClassTask
         public TeachersList() { teachers = new List<Teacher>(); }
         public void AddTeacher(string Name, string Surname, int Age, string Country, string City, string Street, int HouseNumber, int Limit) 
         {
-            teachers.Add(new Teacher(Name,  Surname,  Age,  Country,  City,  Street,  HouseNumber,  Limit));
+            teachers.Insert(0, new Teacher(Name, Surname, Age, Country, City, Street, HouseNumber, Limit));
             Console.WriteLine("Teacher was successfuly added");
         }
 
         public void AddTeacher(Teacher t) 
         {
-            teachers.Add(t);
+            teachers.Insert(0, t);
             Console.WriteLine("Teacher was successfuly added");
         }
 
@@ -35,29 +35,44 @@ namespace ClassTask
         
         }
 
-        public void RemoveTeacher(string N,string S) 
+        public void Info(int Index) 
         {
-            foreach (Teacher i in teachers) 
+            if (Index > teachers.Count) 
             {
-                if (N == i.Name & S == i.Surname)
-                {
-                    teachers.Remove(i);
-                    Console.WriteLine($"Teacher {N} {S} was successfully removed");
-                    break;
-                }
-                
+                Console.WriteLine("Number isnt in list range");
+                return;
             }
+            teachers[Index].Info();
         }
 
-     
-
-        public  void Info() 
+        public  void ShowAll() 
         {
+            if (teachers.Count == 0)
+            {
+                Console.WriteLine("Empty list");
+                return;
+            }
             Console.WriteLine("Teachers:");
             foreach (Teacher i in teachers) 
             {
                 i.Introduction();
             }
+            Console.WriteLine("\n");
+        }
+
+        public int FindTeacher(string Name, string Surname) 
+        {
+            foreach (Teacher i in teachers)
+            {
+                
+                if (Name == i.Name & Surname == i.Surname)
+                {
+                    return teachers.IndexOf(i);
+                }
+                
+            }
+            
+            return -1;
         }
     }
 }

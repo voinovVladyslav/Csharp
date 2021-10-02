@@ -11,10 +11,26 @@ namespace ClassTask
         private string street;
         private int houseNumber;
 
-        public string Country { set; get; }
-        public string City { set; get; }
-        public string Street { set; get; }
-        public int HouseNumber { set; get; }
+        public string Country
+        {
+            set { country = value; }
+            get { return country; }
+        }
+        public string City
+        {
+            set { city = value; }
+            get { return city; }
+        }
+        public string Street
+        {
+           set { street = value; }
+           get { return street; }
+        }
+        public int HouseNumber
+        {
+            set { houseNumber = value; }
+            get { return houseNumber; }
+        }
 
         public Adress() {}
         public void Change(string Country, string City, string Street, int HouseNumber) 

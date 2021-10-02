@@ -72,6 +72,7 @@ namespace ClassTask
         {
             return t1.Name != t2.Name & t1.Surname != t2.Surname & t1.Age != t2.Age;
         }
+       
         
     }
 }

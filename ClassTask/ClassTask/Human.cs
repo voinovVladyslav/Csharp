@@ -12,9 +12,21 @@ namespace ClassTask
 
         private Adress adress = new Adress();
 
-        public string Name { set; get; }
-        public string Surname { set; get; }
-        public int Age { set; get; }
+        public string Name 
+        {
+            set { name = value; }
+            get { return name; }
+        }
+        public string Surname
+        {
+            set { surname = value; }
+            get { return surname; }
+        }
+        public int Age
+        {
+            set { age = value; }
+            get { return age; }
+        }
         public string Country 
         { 
             set {   adress.Country = value; }

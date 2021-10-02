@@ -8,26 +8,12 @@ namespace ClassTask
         {
             TeachersList list = new TeachersList();
 
-            list.AddTeacher("Sasha", "Rook", 26, "Ukraine", "Kherson", "Ushakova", 13, 5);
-            Teacher t = new Teacher("Slava", "Groomer", 63, "Ukraine", "Kherson", "Nekrasova", 44, 6);
-            
-            list.AddTeacher(t);
-            
-            list.Info();
-
-            list.RemoveTeacher(t);
-            list.RemoveTeacher("Sasha","Rook");
-
-            list.Info();
-            /*
              Console.WriteLine("Choose what to do:\n " +
-                 "1. Add student \n" +
-                 "2." +
-                 "3." +
-                 "4." +
-                 "5." +
-                 "6." +
-                 "7.");
+                 "0. Exit" +
+                 "1. Add teacher\n" +
+                 "2. Delete teacher\n" +
+                 "3. Work with teacher\n" +
+                 "4. Show all teachers");
              int control = 1;
              while (control != 0)
              {
@@ -60,7 +46,7 @@ namespace ClassTask
 
                  }
              }
-             */
+             
         }
     }
 }
