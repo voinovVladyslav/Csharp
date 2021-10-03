@@ -44,7 +44,15 @@ namespace ClassTask
             }
             teachers[Index].Info();
         }
-
+        public void Introduction(int Index) 
+        {
+            if (Index > teachers.Count)
+            {
+                Console.WriteLine("Number isnt in list range");
+                return;
+            }
+            teachers[Index].Introduction();
+        }
         public  void ShowAll() 
         {
             if (teachers.Count == 0)
@@ -57,7 +65,7 @@ namespace ClassTask
             {
                 i.Introduction();
             }
-            Console.WriteLine("\n");
+            
         }
 
         public int FindTeacher(string Name, string Surname) 
@@ -73,6 +81,36 @@ namespace ClassTask
             }
             
             return -1;
+        }
+
+        public void WorkWithTeacher(int index) 
+        {
+            Console.WriteLine("0. Exit\n" +
+                "1. Get info\n" +
+                "2. Get full info\n" +
+                "3. \n" +
+                "4. ");
+            int control = 1;
+            while (control != 0) 
+            {
+                Console.WriteLine("Enter command:");
+                control = int.Parse(Console.ReadLine());
+                switch(control)               
+                { 
+                    case 0:
+                        Console.WriteLine("Exit");
+                        break;
+                    case 1:
+                        this.Introduction(index);
+                        break;
+                    case 2:
+                        this.Info(index);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid value");
+                        break;
+                }
+            }
         }
     }
 }

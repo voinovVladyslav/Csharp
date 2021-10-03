@@ -9,7 +9,11 @@ namespace ClassTask
         private int averageMarks;
         private Marks rating;
         Random number = new Random();
-        public int AverageMarks { set; get; }
+        public int AverageMarks 
+        {
+            set { averageMarks = value; }
+            get { return averageMarks; }
+        }
         public Student() { }
 
         public Student(string Name, string Surname, int Age, string Country, string City, string Street, int HouseNumber) : base(Name, Surname, Age, Country, City, Street, HouseNumber)
