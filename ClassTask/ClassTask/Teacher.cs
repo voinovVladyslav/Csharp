@@ -24,12 +24,32 @@ namespace ClassTask
             base.Info();
             Console.WriteLine("Max students: {0}", this.limit);
             Console.WriteLine("Students under wing:{0}", this.limitCounter);
+            
+        }
+        public void StudentsIntroduction() 
+        {
+            if (students.Count == 0) 
+            {
+                Console.WriteLine("There is no students");
+                return;
+            }
+            foreach (Student i in students)
+            {
+                i.Introduction();
+            }
+        }
+        public void StudentsInfo()
+        {
+            if (students.Count == 0)
+            {
+                Console.WriteLine("There is no students");
+                return;
+            }
             foreach (Student i in students)
             {
                 i.Info();
             }
         }
-
         public void AddStudent(Student student)
         {
             if (limitCounter < limit)
@@ -54,7 +74,26 @@ namespace ClassTask
                 Console.WriteLine("Succsesfuly removed student");
             }
         }
+        public void RemoveStudent(string Name,string Surname) 
+        {
+            if (limitCounter == 0)
+            {
+                Console.WriteLine("There is no one to remove");
+            }
+            else
+            {
+                foreach (Student i in students) 
+                {
+                    if (i.Name == Name & i.Surname == Surname) 
+                    {
+                        students.Remove(i);
+                        limitCounter--;
+                        Console.WriteLine("Succsesfuly removed student");
+                    }
+                }
+            }
 
+        }
         public static bool operator >(Teacher t1, Teacher t2)
         {
             return t1.limitCounter > t2.limitCounter;

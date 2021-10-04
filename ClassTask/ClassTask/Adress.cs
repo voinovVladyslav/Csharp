@@ -41,6 +41,6 @@ namespace ClassTask
             houseNumber = HouseNumber;
         }
 
-        public void Show() { Console.WriteLine("Country: {0}\nCity: {1}\nStreet: {2}\nHouse number: {3}\n", this.country, this.city, this.street, this.houseNumber); }
+        public void Show() { Console.WriteLine("Country: {0}\nCity: {1}\nStreet: {2}\nHouse number: {3}", this.country, this.city, this.street, this.houseNumber); }
     }
 }

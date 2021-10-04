@@ -12,9 +12,11 @@ namespace ClassTask
                  "1. Add teacher\n" +
                  "2. Find teacher\n" +
                  "3. Work with teacher\n" +
-                 "4. Show all teachers");
-            Teacher t = new Teacher("Valera","Biven",54,"Ukraine","Kherson","",7,4);
+                 "4. Show all teachers\n" +
+                 "5. Remove teacher\n");
+            Teacher t = new Teacher("Valera","Biven",54,"Ukraine","Kherson","Ushakova",7,4);
             list.AddTeacher(t);
+            
             int control = 1;
             while (control != 0)
             {
@@ -70,13 +72,18 @@ namespace ClassTask
                         }
                        break;
                     case 3:
-                        Console.WriteLine("Enter teachres index to work with");
+                        Console.WriteLine("Enter teachers index to work with");
                         int i = int.Parse(Console.ReadLine());
                         list.WorkWithTeacher(i);
                         break;
                     case 4:
-                       list.ShowAll();
+                       list.Info();
                        break;
+                    case 5:
+                        Console.WriteLine("Enter index to remove teacher:");
+                        i = int.Parse(Console.ReadLine()); 
+                        list.RemoveTeacher(i);
+                        break;
                     default:
                        Console.WriteLine("Wrong value");
                        break;
