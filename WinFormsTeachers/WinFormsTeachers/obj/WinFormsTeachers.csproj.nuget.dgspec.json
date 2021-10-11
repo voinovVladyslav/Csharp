@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Programs\\C#\\Csharp\\ClassTask\\ClassTask\\ClassTask.csproj": {}
+    "F:\\Programs\\C#\\Csharp\\WinFormsTeachers\\WinFormsTeachers\\WinFormsTeachers.csproj": {}
   },
   "projects": {
-    "F:\\Programs\\C#\\Csharp\\ClassTask\\ClassTask\\ClassTask.csproj": {
+    "F:\\Programs\\C#\\Csharp\\WinFormsTeachers\\WinFormsTeachers\\WinFormsTeachers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Programs\\C#\\Csharp\\ClassTask\\ClassTask\\ClassTask.csproj",
-        "projectName": "ClassTask",
-        "projectPath": "F:\\Programs\\C#\\Csharp\\ClassTask\\ClassTask\\ClassTask.csproj",
+        "projectUniqueName": "F:\\Programs\\C#\\Csharp\\WinFormsTeachers\\WinFormsTeachers\\WinFormsTeachers.csproj",
+        "projectName": "WinFormsTeachers",
+        "projectPath": "F:\\Programs\\C#\\Csharp\\WinFormsTeachers\\WinFormsTeachers\\WinFormsTeachers.csproj",
         "packagesPath": "C:\\Users\\silve\\.nuget\\packages\\",
-        "outputPath": "F:\\Programs\\C#\\Csharp\\ClassTask\\ClassTask\\obj\\",
+        "outputPath": "F:\\Programs\\C#\\Csharp\\WinFormsTeachers\\WinFormsTeachers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -56,6 +56,9 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
