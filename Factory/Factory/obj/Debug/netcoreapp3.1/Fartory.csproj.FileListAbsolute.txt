@@ -1,0 +1,14 @@
+F:\Programs\C#\Csharp\Fartory\Fartory\bin\Debug\netcoreapp3.1\Fartory.exe
+F:\Programs\C#\Csharp\Fartory\Fartory\bin\Debug\netcoreapp3.1\Fartory.deps.json
+F:\Programs\C#\Csharp\Fartory\Fartory\bin\Debug\netcoreapp3.1\Fartory.runtimeconfig.json
+F:\Programs\C#\Csharp\Fartory\Fartory\bin\Debug\netcoreapp3.1\Fartory.runtimeconfig.dev.json
+F:\Programs\C#\Csharp\Fartory\Fartory\bin\Debug\netcoreapp3.1\Fartory.dll
+F:\Programs\C#\Csharp\Fartory\Fartory\bin\Debug\netcoreapp3.1\Fartory.pdb
+F:\Programs\C#\Csharp\Fartory\Fartory\obj\Debug\netcoreapp3.1\Fartory.csproj.AssemblyReference.cache
+F:\Programs\C#\Csharp\Fartory\Fartory\obj\Debug\netcoreapp3.1\Fartory.GeneratedMSBuildEditorConfig.editorconfig
+F:\Programs\C#\Csharp\Fartory\Fartory\obj\Debug\netcoreapp3.1\Fartory.AssemblyInfoInputs.cache
+F:\Programs\C#\Csharp\Fartory\Fartory\obj\Debug\netcoreapp3.1\Fartory.AssemblyInfo.cs
+F:\Programs\C#\Csharp\Fartory\Fartory\obj\Debug\netcoreapp3.1\Fartory.csproj.CoreCompileInputs.cache
+F:\Programs\C#\Csharp\Fartory\Fartory\obj\Debug\netcoreapp3.1\Fartory.dll
+F:\Programs\C#\Csharp\Fartory\Fartory\obj\Debug\netcoreapp3.1\Fartory.pdb
+F:\Programs\C#\Csharp\Fartory\Fartory\obj\Debug\netcoreapp3.1\Fartory.genruntimeconfig.cache

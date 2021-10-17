@@ -1,0 +1,14 @@
+F:\Programs\C#\Csharp\Singleton\Singleton\bin\Debug\netcoreapp3.1\Singleton.exe
+F:\Programs\C#\Csharp\Singleton\Singleton\bin\Debug\netcoreapp3.1\Singleton.deps.json
+F:\Programs\C#\Csharp\Singleton\Singleton\bin\Debug\netcoreapp3.1\Singleton.runtimeconfig.json
+F:\Programs\C#\Csharp\Singleton\Singleton\bin\Debug\netcoreapp3.1\Singleton.runtimeconfig.dev.json
+F:\Programs\C#\Csharp\Singleton\Singleton\bin\Debug\netcoreapp3.1\Singleton.dll
+F:\Programs\C#\Csharp\Singleton\Singleton\bin\Debug\netcoreapp3.1\Singleton.pdb
+F:\Programs\C#\Csharp\Singleton\Singleton\obj\Debug\netcoreapp3.1\Singleton.csproj.AssemblyReference.cache
+F:\Programs\C#\Csharp\Singleton\Singleton\obj\Debug\netcoreapp3.1\Singleton.GeneratedMSBuildEditorConfig.editorconfig
+F:\Programs\C#\Csharp\Singleton\Singleton\obj\Debug\netcoreapp3.1\Singleton.AssemblyInfoInputs.cache
+F:\Programs\C#\Csharp\Singleton\Singleton\obj\Debug\netcoreapp3.1\Singleton.AssemblyInfo.cs
+F:\Programs\C#\Csharp\Singleton\Singleton\obj\Debug\netcoreapp3.1\Singleton.csproj.CoreCompileInputs.cache
+F:\Programs\C#\Csharp\Singleton\Singleton\obj\Debug\netcoreapp3.1\Singleton.dll
+F:\Programs\C#\Csharp\Singleton\Singleton\obj\Debug\netcoreapp3.1\Singleton.pdb
+F:\Programs\C#\Csharp\Singleton\Singleton\obj\Debug\netcoreapp3.1\Singleton.genruntimeconfig.cache
