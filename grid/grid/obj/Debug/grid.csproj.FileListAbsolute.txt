@@ -1,0 +1,10 @@
+D:\241\grid\grid\bin\Debug\grid.exe.config
+D:\241\grid\grid\bin\Debug\grid.exe
+D:\241\grid\grid\bin\Debug\grid.pdb
+D:\241\grid\grid\obj\Debug\grid.csprojAssemblyReference.cache
+D:\241\grid\grid\obj\Debug\grid.Form1.resources
+D:\241\grid\grid\obj\Debug\grid.Properties.Resources.resources
+D:\241\grid\grid\obj\Debug\grid.csproj.GenerateResource.cache
+D:\241\grid\grid\obj\Debug\grid.csproj.CoreCompileInputs.cache
+D:\241\grid\grid\obj\Debug\grid.exe
+D:\241\grid\grid\obj\Debug\grid.pdb
