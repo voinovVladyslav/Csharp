@@ -20,29 +20,63 @@ namespace grid
             InitializeComponent();
         }
 
-        
 
-        
-
-        private List<Human> CreateHumans() 
+        private List<Teacher> CreateTeachers() 
         {
-            List<Human> lst = new List<Human>();
-            Adress adr = new Adress("Ukraine","Kherson","Ushakova", 38);
-            Human h1 = new Human("Valera", "Borov", 22, 53252, adr);
-            Human h2 = new Human("Denis", "Golova", 15, 325234, adr);
-            Human h3 = new Human("Slava", "Ukraintsev", 32, 123423, adr);
+            List<Teacher> lst = new List<Teacher>();
 
-            lst.Add(h1);
-            lst.Add(h2);
-            lst.Add(h3);
+            Adress adr = new Adress("Ukraine", "Kherson", "Ushakova", 32);
+            Teacher t1 = new Teacher("Valera", "Borov", 22, 53252, adr);
+            Teacher t2 = new Teacher("Denis", "Golova", 15, 325234, adr);
+            Teacher t3 = new Teacher("Slava", "Ukraintsev", 32, 123423, adr);
+
+            lst.Add(t1);
+            lst.Add(t2);
+            lst.Add(t3);
+
+            Student s1 = new Student("Grisha", "Griza", 16, 513252, adr);
+            Student s2 = new Student("Maksim", "Drova", 31, 325235, adr);
+            Student s3 = new Student("Danil", "Morgun", 53, 433423, adr);
+            Student s4 = new Student("Vladislav", "Stepanov", 12, 4124423, adr);
+            Student s5 = new Student("Artur", "Klimenko", 19, 43367, adr);
+            Student s6 = new Student("Danil", "Pongurski", 35, 4312323, adr);
+
+            lst[0].AddStudent(s1);
+            lst[1].AddStudent(s2);
+            lst[1].AddStudent(s3);
+            lst[2].AddStudent(s4);
+            lst[2].AddStudent(s5);
+            lst[2].AddStudent(s6);
 
             return lst;
         }
 
-        public void dtCreate() 
+        private void chartCreate() 
+        {
+            List<Teacher> tchList = CreateTeachers();
+
+            for (int i = 0; i < tchList.Count; i++)
+            {
+                chart1.Series["Series1"].Points.AddXY(tchList[i].Name, tchList[i].Age);
+                List<Student> stdList = tchList[i].GetStudentList();
+                for (int j = 0; j < stdList.Count; j++)
+                {
+                    chart1.Series["Series1"].Points.AddXY(stdList[i].Name, stdList[i].Age);
+
+
+
+                }
+
+            }
+        }
+
+        
+        
+
+        private void dtCreate(List<Student> stdList)
         {
 
-            List<Human> list = CreateHumans();
+            
             DataTable dt = new DataTable();
             dt.Columns.Add("Name");
             dt.Columns.Add("Surname");
@@ -53,41 +87,88 @@ namespace grid
             dt.Columns.Add("Street");
             dt.Columns.Add("House");
 
-
-            foreach (Human i in list) 
+            
+            foreach (Student i in stdList)
             {
                 dt.Rows.Add(i.Name, i.Surname, i.Age, i.ID, i.Country, i.City, i.Street, i.HouseNumber);
-                this.chart1.Series["Series1"].Points.AddXY(i.Name, i.Age);
+                
             }
-
+            
             this.dataGridView1.DataSource = dt;
-            
 
-            
-           
         }
 
         public void treeCreate() 
         {
             TreeNode root = new TreeNode();
+            List<Teacher> list = CreateTeachers();
 
             root.Name = "rootName";
-            root.Text = "cars";
+            root.Text = "Teachers";
             treeView1.Nodes.Add(root);
-            treeView1.Nodes[0].Nodes.Add("bmw");
-            treeView1.Nodes[0].Nodes[0].Nodes.Add("x5");
-            treeView1.Nodes[0].Nodes[0].Nodes.Add("x7");
-            treeView1.Nodes[0].Nodes.Add("mercedes-benz");
-            treeView1.Nodes[0].Nodes[1].Nodes.Add("s500");
-            treeView1.Nodes[0].Nodes[1].Nodes.Add("c200");
+
+            
+            for(int i = 0; i < list.Count; i++)
+            {
+                treeView1.Nodes[0].Nodes.Add(list[i].Name);
+                for(int j = 0; j < list[i].GetStudentList().Count(); j++)
+                {
+                    List<Student> lst = list[i].GetStudentList();
+
+                    treeView1.Nodes[0].Nodes[i].Nodes.Add(lst[j].Name);
+                    
+                }
+                
+            }
+            
+            
+        }
+
+        private void comboBoxCreate() 
+        {
+            List<Teacher> list = CreateTeachers();
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                comboBox1.Items.Add(list[i].Name);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dtCreate();
+            chartCreate();
             treeCreate();
+            comboBoxCreate();
 
+        }
 
+        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string n = comboBox1.SelectedItem.ToString();
+            
+
+            List<Teacher> lstTch = CreateTeachers();
+            List<Student> stdLst = new List<Student>();
+
+            for (int i = 0; i < lstTch.Count; i++) 
+            {
+                if (lstTch[i].Name == n) 
+                {
+                    List<Student> lst = lstTch[i].GetStudentList();
+
+                    for (int j = 0; j < lst.Count; j++) 
+                    {
+                        
+                        stdLst.Add(lst[j]);
+                    }
+
+                }
+
+            }
+
+            dtCreate(stdLst);
         }
     }
 }
