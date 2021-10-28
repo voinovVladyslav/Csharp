@@ -34,12 +34,12 @@ namespace grid
             lst.Add(t2);
             lst.Add(t3);
 
-            Student s1 = new Student("Grisha", "Griza", 16, 513252, adr);
-            Student s2 = new Student("Maksim", "Drova", 31, 325235, adr);
-            Student s3 = new Student("Danil", "Morgun", 53, 433423, adr);
-            Student s4 = new Student("Vladislav", "Stepanov", 12, 4124423, adr);
-            Student s5 = new Student("Artur", "Klimenko", 19, 43367, adr);
-            Student s6 = new Student("Danil", "Pongurski", 35, 4312323, adr);
+            Student s1 = new Student("Grisha", "Griza", 16, 513252, 4, adr);
+            Student s2 = new Student("Maksim", "Drova", 31, 325235,2, adr);
+            Student s3 = new Student("Danil", "Morgun", 53, 433423, 1, adr);
+            Student s4 = new Student("Vladislav", "Stepanov", 12, 4124423, 5, adr);
+            Student s5 = new Student("Artur", "Klimenko", 19, 43367, 3, adr);
+            Student s6 = new Student("Danil", "Pongurski", 35, 4312323, 4, adr);
 
             lst[0].AddStudent(s1);
             lst[1].AddStudent(s2);
@@ -58,7 +58,9 @@ namespace grid
             for (int i = 0; i < tchList.Count; i++)
             {
                 chart1.Series["Series1"].Points.AddXY(tchList[i].Name, tchList[i].Age);
+
                 List<Student> stdList = tchList[i].GetStudentList();
+
                 for (int j = 0; j < stdList.Count; j++)
                 {
                     chart1.Series["Series1"].Points.AddXY(stdList[i].Name, stdList[i].Age);
@@ -82,6 +84,7 @@ namespace grid
             dt.Columns.Add("Surname");
             dt.Columns.Add("Age");
             dt.Columns.Add("ID");
+            dt.Columns.Add("Mark");
             dt.Columns.Add("Country");
             dt.Columns.Add("City");
             dt.Columns.Add("Street");
@@ -90,7 +93,7 @@ namespace grid
             
             foreach (Student i in stdList)
             {
-                dt.Rows.Add(i.Name, i.Surname, i.Age, i.ID, i.Country, i.City, i.Street, i.HouseNumber);
+                dt.Rows.Add(i.Name, i.Surname, i.Age, i.ID, i.Mark, i.Country, i.City, i.Street, i.HouseNumber);
                 
             }
             
