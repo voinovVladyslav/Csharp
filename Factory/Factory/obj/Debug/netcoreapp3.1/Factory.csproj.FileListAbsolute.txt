@@ -1,0 +1,14 @@
+F:\Programs\C#\Csharp\Factory\Factory\bin\Debug\netcoreapp3.1\Factory.exe
+F:\Programs\C#\Csharp\Factory\Factory\bin\Debug\netcoreapp3.1\Factory.deps.json
+F:\Programs\C#\Csharp\Factory\Factory\bin\Debug\netcoreapp3.1\Factory.runtimeconfig.json
+F:\Programs\C#\Csharp\Factory\Factory\bin\Debug\netcoreapp3.1\Factory.runtimeconfig.dev.json
+F:\Programs\C#\Csharp\Factory\Factory\bin\Debug\netcoreapp3.1\Factory.dll
+F:\Programs\C#\Csharp\Factory\Factory\bin\Debug\netcoreapp3.1\Factory.pdb
+F:\Programs\C#\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.csproj.AssemblyReference.cache
+F:\Programs\C#\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.GeneratedMSBuildEditorConfig.editorconfig
+F:\Programs\C#\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.AssemblyInfoInputs.cache
+F:\Programs\C#\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.AssemblyInfo.cs
+F:\Programs\C#\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.csproj.CoreCompileInputs.cache
+F:\Programs\C#\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.dll
+F:\Programs\C#\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.pdb
+F:\Programs\C#\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.genruntimeconfig.cache

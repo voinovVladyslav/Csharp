@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YY+Hd7EMQimgILfs4q87QGctLKHUeBfBlaa6r0MzFf+/BbDcmWJQkiRqYUW8cO9/KNoTv3fsAInGDBwsNshMWA==",
+  "dgSpecHash": "mkMBjaIbrjJbzi115aMt7Nndx31Gxs1hOTNYeDumdWvmZtWUhveyfIFAw46TPep7NRbqwtDyC3BXqZFKhvCu6Q==",
   "success": true,
-  "projectFilePath": "F:\\Programs\\C#\\Csharp\\Fartory\\Fartory\\Fartory.csproj",
+  "projectFilePath": "F:\\Programs\\C#\\Csharp\\Factory\\Factory\\Factory.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -8,7 +8,7 @@ namespace Fartory
     {
         public CottageCheeseCreator(string n) : base(n)
         { }
-        
+         
         public override Product Create()
         {
             return new CottageCheese();
