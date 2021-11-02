@@ -18,6 +18,7 @@ namespace grid
         public Form1()
         {
             InitializeComponent();
+
         }
 
 
@@ -51,34 +52,29 @@ namespace grid
             return lst;
         }
 
-        private void chartCreate() 
+        private void chartCreate(List<Teacher> tchList) 
         {
-            List<Teacher> tchList = CreateTeachers();
-
+            chart1.Series["Series1"].Points.Clear();
             for (int i = 0; i < tchList.Count; i++)
             {
                 chart1.Series["Series1"].Points.AddXY(tchList[i].Name, tchList[i].Age);
+            }
+        }
 
-                List<Student> stdList = tchList[i].GetStudentList();
-
-                for (int j = 0; j < stdList.Count; j++)
-                {
-                    chart1.Series["Series1"].Points.AddXY(stdList[i].Name, stdList[i].Age);
-
-
-
-                }
+        private void chartCreate(List<Student> stdList)
+        {
+            chart1.Series["Series1"].Points.Clear();
+            for (int i = 0; i < stdList.Count; i++)
+            {
+                chart1.Series["Series1"].Points.AddXY(stdList[i].Name, stdList[i].Age);
 
             }
         }
 
         
-        
-
         private void dtCreate(List<Student> stdList)
         {
 
-            
             DataTable dt = new DataTable();
             dt.Columns.Add("Name");
             dt.Columns.Add("Surname");
@@ -98,6 +94,29 @@ namespace grid
             }
             
             this.dataGridView1.DataSource = dt;
+
+        }
+
+        private void dtCreate(List<Teacher> tchList)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Surname");
+            dt.Columns.Add("Age");
+            dt.Columns.Add("ID");
+            dt.Columns.Add("Country");
+            dt.Columns.Add("City");
+            dt.Columns.Add("Street");
+            dt.Columns.Add("House");
+
+
+            foreach (Teacher i in tchList)
+            {
+                dt.Rows.Add(i.Name, i.Surname, i.Age, i.ID, i.Country, i.City, i.Street, i.HouseNumber);
+
+            }
+
+            this.dataGridView2.DataSource = dt;
 
         }
 
@@ -139,10 +158,11 @@ namespace grid
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            chartCreate();
+            chartCreate(CreateTeachers());
             treeCreate();
             comboBoxCreate();
-
+            dtCreate(CreateTeachers());
+            
         }
 
         
@@ -171,6 +191,8 @@ namespace grid
 
             }
 
+            
+            chartCreate(stdLst);
             dtCreate(stdLst);
         }
     }
