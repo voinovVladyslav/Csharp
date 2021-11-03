@@ -12,8 +12,7 @@ namespace grid
 {
     public partial class Form1 : Form
     {
-
-        
+        private List<Teacher> teacherList = new List<Teacher>();
 
         public Form1()
         {
@@ -21,19 +20,16 @@ namespace grid
 
         }
 
-
-        private List<Teacher> CreateTeachers() 
+        private void CreateTeachers() 
         {
-            List<Teacher> lst = new List<Teacher>();
-
             Adress adr = new Adress("Ukraine", "Kherson", "Ushakova", 32);
             Teacher t1 = new Teacher("Valera", "Borov", 22, 53252, adr);
             Teacher t2 = new Teacher("Denis", "Golova", 15, 325234, adr);
             Teacher t3 = new Teacher("Slava", "Ukraintsev", 32, 123423, adr);
 
-            lst.Add(t1);
-            lst.Add(t2);
-            lst.Add(t3);
+            teacherList.Add(t1);
+            teacherList.Add(t2);
+            teacherList.Add(t3);
 
             Student s1 = new Student("Grisha", "Griza", 16, 513252, 4, adr);
             Student s2 = new Student("Maksim", "Drova", 31, 325235,2, adr);
@@ -42,14 +38,12 @@ namespace grid
             Student s5 = new Student("Artur", "Klimenko", 19, 43367, 3, adr);
             Student s6 = new Student("Danil", "Pongurski", 35, 4312323, 4, adr);
 
-            lst[0].AddStudent(s1);
-            lst[1].AddStudent(s2);
-            lst[1].AddStudent(s3);
-            lst[2].AddStudent(s4);
-            lst[2].AddStudent(s5);
-            lst[2].AddStudent(s6);
-
-            return lst;
+            teacherList[0].AddStudent(s1);
+            teacherList[1].AddStudent(s2);
+            teacherList[1].AddStudent(s3);
+            teacherList[2].AddStudent(s4);
+            teacherList[2].AddStudent(s5);
+            teacherList[2].AddStudent(s6);
         }
 
         private void chartCreate(List<Teacher> tchList) 
@@ -67,14 +61,11 @@ namespace grid
             for (int i = 0; i < stdList.Count; i++)
             {
                 chart1.Series["Series1"].Points.AddXY(stdList[i].Name, stdList[i].Age);
-
             }
         }
 
-        
         private void dtCreate(List<Student> stdList)
         {
-
             DataTable dt = new DataTable();
             dt.Columns.Add("Name");
             dt.Columns.Add("Surname");
@@ -85,16 +76,12 @@ namespace grid
             dt.Columns.Add("City");
             dt.Columns.Add("Street");
             dt.Columns.Add("House");
-
             
             foreach (Student i in stdList)
             {
                 dt.Rows.Add(i.Name, i.Surname, i.Age, i.ID, i.Mark, i.Country, i.City, i.Street, i.HouseNumber);
-                
             }
-            
-            this.dataGridView1.DataSource = dt;
-
+            dataGridView1.DataSource = dt;
         }
 
         private void dtCreate(List<Teacher> tchList)
@@ -109,33 +96,26 @@ namespace grid
             dt.Columns.Add("Street");
             dt.Columns.Add("House");
 
-
             foreach (Teacher i in tchList)
             {
                 dt.Rows.Add(i.Name, i.Surname, i.Age, i.ID, i.Country, i.City, i.Street, i.HouseNumber);
-
             }
-
-            this.dataGridView2.DataSource = dt;
-
+            dataGridView2.DataSource = dt;
         }
 
         public void treeCreate() 
         {
             TreeNode root = new TreeNode();
-            List<Teacher> list = CreateTeachers();
-
             root.Name = "rootName";
             root.Text = "Teachers";
             treeView1.Nodes.Add(root);
 
-            
-            for(int i = 0; i < list.Count; i++)
+            for(int i = 0; i < teacherList.Count; i++)
             {
-                treeView1.Nodes[0].Nodes.Add(list[i].Name);
-                for(int j = 0; j < list[i].GetStudentList().Count(); j++)
+                treeView1.Nodes[0].Nodes.Add(teacherList[i].Name);
+                for(int j = 0; j < teacherList[i].GetStudentList().Count(); j++)
                 {
-                    List<Student> lst = list[i].GetStudentList();
+                    List<Student> lst = teacherList[i].GetStudentList();
 
                     treeView1.Nodes[0].Nodes[i].Nodes.Add(lst[j].Name);
                     
@@ -145,56 +125,68 @@ namespace grid
 
         private void comboBoxCreate() 
         {
-            List<Teacher> list = CreateTeachers();
-
-            for (int i = 0; i < list.Count; i++)
+            for (int i = 0; i < teacherList.Count; i++)
             {
-                comboBox1.Items.Add(list[i].Name);
+                comboBox1.Items.Add(teacherList[i].Name);
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            chartCreate(CreateTeachers());
+            CreateTeachers();
+
+            chartCreate(teacherList);
             treeCreate();
             comboBoxCreate();
-            dtCreate(CreateTeachers());
+            dtCreate(teacherList);
             
         }
-        
 
         private void button1_Click(object sender, EventArgs e)
         {
             string n = comboBox1.SelectedItem.ToString();
             
-
-            List<Teacher> lstTch = CreateTeachers();
             List<Student> stdLst = new List<Student>();
 
-            for (int i = 0; i < lstTch.Count; i++) 
+            for (int i = 0; i < teacherList.Count; i++) 
             {
-                if (lstTch[i].Name == n) 
+                if (teacherList[i].Name == n) 
                 {
-                    List<Student> lst = lstTch[i].GetStudentList();
+                    List<Student> lst = teacherList[i].GetStudentList();
 
                     for (int j = 0; j < lst.Count; j++) 
                     {
                         
                         stdLst.Add(lst[j]);
                     }
-
                 }
-
             }
-            
             chartCreate(stdLst);
             dtCreate(stdLst);
         }
 
-        private void createStudent() 
+        private void AddTeacher() 
         {
-            Student std = new Student();
+            string country = textBoxTchCountry.Text;
+            string city = textBoxTchCity.Text;
+            string street = textBoxTchStreet.Text;
+            int houseNumber = int.Parse(textBoxTchHouseNumber.Text);
+
+            Adress adr = new Adress(country, city, street, houseNumber);
+
+            string name = textBoxTchName.Text;
+            string surname = textBoxTchSurname.Text;
+            int age = int.Parse(textBoxTchAge.Text);
+            int id = int.Parse(textBoxTchID.Text);
+
+            Teacher tch = new Teacher(name, surname, age, id, adr);
+            teacherList.Add(tch);
+        }
+
+        private void buttonTchAdd_Click(object sender, EventArgs e)
+        {
+            AddTeacher();
+            
         }
     }
 }
-

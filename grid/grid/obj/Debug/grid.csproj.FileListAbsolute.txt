@@ -18,3 +18,13 @@ D:\241\Csharp\grid\grid\obj\Debug\grid.csproj.GenerateResource.cache
 D:\241\Csharp\grid\grid\obj\Debug\grid.csproj.CoreCompileInputs.cache
 D:\241\Csharp\grid\grid\obj\Debug\grid.exe
 D:\241\Csharp\grid\grid\obj\Debug\grid.pdb
+F:\Programs\C#\Csharp\grid\grid\bin\Debug\grid.exe.config
+F:\Programs\C#\Csharp\grid\grid\bin\Debug\grid.exe
+F:\Programs\C#\Csharp\grid\grid\bin\Debug\grid.pdb
+F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.csproj.AssemblyReference.cache
+F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.Form1.resources
+F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.Properties.Resources.resources
+F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.csproj.GenerateResource.cache
+F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.csproj.CoreCompileInputs.cache
+F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.exe
+F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.pdb

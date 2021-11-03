@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.treeView1 = new System.Windows.Forms.TreeView();
@@ -40,22 +40,12 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBoxTchName = new System.Windows.Forms.TextBox();
-            this.textBoxTchSurname = new System.Windows.Forms.TextBox();
-            this.textBoxTchAge = new System.Windows.Forms.TextBox();
-            this.textBoxTchID = new System.Windows.Forms.TextBox();
-            this.textBoxTchCountry = new System.Windows.Forms.TextBox();
-            this.textBoxTchCity = new System.Windows.Forms.TextBox();
-            this.textBoxTchStreet = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBoxTchHouseNumber = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBoxStdMark = new System.Windows.Forms.TextBox();
+            this.buttonStdAdd = new System.Windows.Forms.Button();
+            this.buttonTchAdd = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.textBoxStdHouseNumber = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -72,12 +62,22 @@
             this.textBoxStdAge = new System.Windows.Forms.TextBox();
             this.textBoxStdSurname = new System.Windows.Forms.TextBox();
             this.textBoxStdName = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.buttonTchAdd = new System.Windows.Forms.Button();
-            this.buttonStdAdd = new System.Windows.Forms.Button();
-            this.textBoxStdMark = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
+            this.textBoxTchHouseNumber = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxTchStreet = new System.Windows.Forms.TextBox();
+            this.textBoxTchCity = new System.Windows.Forms.TextBox();
+            this.textBoxTchCountry = new System.Windows.Forms.TextBox();
+            this.textBoxTchID = new System.Windows.Forms.TextBox();
+            this.textBoxTchAge = new System.Windows.Forms.TextBox();
+            this.textBoxTchSurname = new System.Windows.Forms.TextBox();
+            this.textBoxTchName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -96,16 +96,16 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(277, 321);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(300, 150);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
@@ -215,136 +215,61 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1014, 486);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Add";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBoxTchName
+            // label19
             // 
-            this.textBoxTchName.Location = new System.Drawing.Point(103, 46);
-            this.textBoxTchName.Name = "textBoxTchName";
-            this.textBoxTchName.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTchName.TabIndex = 0;
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(791, 156);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(31, 13);
+            this.label19.TabIndex = 37;
+            this.label19.Text = "Mark";
             // 
-            // textBoxTchSurname
+            // textBoxStdMark
             // 
-            this.textBoxTchSurname.Location = new System.Drawing.Point(103, 72);
-            this.textBoxTchSurname.Name = "textBoxTchSurname";
-            this.textBoxTchSurname.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTchSurname.TabIndex = 1;
+            this.textBoxStdMark.Location = new System.Drawing.Point(871, 153);
+            this.textBoxStdMark.Name = "textBoxStdMark";
+            this.textBoxStdMark.Size = new System.Drawing.Size(100, 20);
+            this.textBoxStdMark.TabIndex = 36;
             // 
-            // textBoxTchAge
+            // buttonStdAdd
             // 
-            this.textBoxTchAge.Location = new System.Drawing.Point(103, 98);
-            this.textBoxTchAge.Name = "textBoxTchAge";
-            this.textBoxTchAge.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTchAge.TabIndex = 2;
+            this.buttonStdAdd.Location = new System.Drawing.Point(859, 325);
+            this.buttonStdAdd.Name = "buttonStdAdd";
+            this.buttonStdAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonStdAdd.TabIndex = 35;
+            this.buttonStdAdd.Text = "CreateS";
+            this.buttonStdAdd.UseVisualStyleBackColor = true;
             // 
-            // textBoxTchID
+            // buttonTchAdd
             // 
-            this.textBoxTchID.Location = new System.Drawing.Point(103, 124);
-            this.textBoxTchID.Name = "textBoxTchID";
-            this.textBoxTchID.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTchID.TabIndex = 3;
+            this.buttonTchAdd.Location = new System.Drawing.Point(103, 270);
+            this.buttonTchAdd.Name = "buttonTchAdd";
+            this.buttonTchAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonTchAdd.TabIndex = 34;
+            this.buttonTchAdd.Text = "CreateT";
+            this.buttonTchAdd.UseVisualStyleBackColor = true;
+            this.buttonTchAdd.Click += new System.EventHandler(this.buttonTchAdd_Click);
             // 
-            // textBoxTchCountry
+            // label18
             // 
-            this.textBoxTchCountry.Location = new System.Drawing.Point(103, 150);
-            this.textBoxTchCountry.Name = "textBoxTchCountry";
-            this.textBoxTchCountry.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTchCountry.TabIndex = 4;
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(868, 13);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(66, 13);
+            this.label18.TabIndex = 33;
+            this.label18.Text = "Add Student";
             // 
-            // textBoxTchCity
+            // label17
             // 
-            this.textBoxTchCity.Location = new System.Drawing.Point(103, 176);
-            this.textBoxTchCity.Name = "textBoxTchCity";
-            this.textBoxTchCity.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTchCity.TabIndex = 5;
-            // 
-            // textBoxTchStreet
-            // 
-            this.textBoxTchStreet.Location = new System.Drawing.Point(103, 202);
-            this.textBoxTchStreet.Name = "textBoxTchStreet";
-            this.textBoxTchStreet.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTchStreet.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Name";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Surname";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 101);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Age";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 127);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "ID";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 153);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Country";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 179);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "City";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 205);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Street";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(21, 231);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "House number";
-            // 
-            // textBoxTchHouseNumber
-            // 
-            this.textBoxTchHouseNumber.Location = new System.Drawing.Point(103, 228);
-            this.textBoxTchHouseNumber.Name = "textBoxTchHouseNumber";
-            this.textBoxTchHouseNumber.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTchHouseNumber.TabIndex = 15;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(100, 13);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(69, 13);
+            this.label17.TabIndex = 32;
+            this.label17.Text = "Add Teacher";
             // 
             // textBoxStdHouseNumber
             // 
@@ -474,57 +399,133 @@
             this.textBoxStdName.Size = new System.Drawing.Size(100, 20);
             this.textBoxStdName.TabIndex = 16;
             // 
-            // label17
+            // textBoxTchHouseNumber
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(100, 13);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(69, 13);
-            this.label17.TabIndex = 32;
-            this.label17.Text = "Add Teacher";
+            this.textBoxTchHouseNumber.Location = new System.Drawing.Point(103, 228);
+            this.textBoxTchHouseNumber.Name = "textBoxTchHouseNumber";
+            this.textBoxTchHouseNumber.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTchHouseNumber.TabIndex = 15;
             // 
-            // label18
+            // label8
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(868, 13);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(66, 13);
-            this.label18.TabIndex = 33;
-            this.label18.Text = "Add Student";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(21, 231);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "House number";
             // 
-            // buttonTchAdd
+            // label7
             // 
-            this.buttonTchAdd.Location = new System.Drawing.Point(103, 270);
-            this.buttonTchAdd.Name = "buttonTchAdd";
-            this.buttonTchAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonTchAdd.TabIndex = 34;
-            this.buttonTchAdd.Text = "CreateT";
-            this.buttonTchAdd.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(21, 205);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Street";
             // 
-            // buttonStdAdd
+            // label6
             // 
-            this.buttonStdAdd.Location = new System.Drawing.Point(859, 325);
-            this.buttonStdAdd.Name = "buttonStdAdd";
-            this.buttonStdAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonStdAdd.TabIndex = 35;
-            this.buttonStdAdd.Text = "CreateS";
-            this.buttonStdAdd.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(21, 179);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(24, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "City";
             // 
-            // textBoxStdMark
+            // label5
             // 
-            this.textBoxStdMark.Location = new System.Drawing.Point(871, 153);
-            this.textBoxStdMark.Name = "textBoxStdMark";
-            this.textBoxStdMark.Size = new System.Drawing.Size(100, 20);
-            this.textBoxStdMark.TabIndex = 36;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 153);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Country";
             // 
-            // label19
+            // label4
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(791, 156);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(31, 13);
-            this.label19.TabIndex = 37;
-            this.label19.Text = "Mark";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 127);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(18, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "ID";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 101);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Age";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Surname";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Name";
+            // 
+            // textBoxTchStreet
+            // 
+            this.textBoxTchStreet.Location = new System.Drawing.Point(103, 202);
+            this.textBoxTchStreet.Name = "textBoxTchStreet";
+            this.textBoxTchStreet.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTchStreet.TabIndex = 6;
+            // 
+            // textBoxTchCity
+            // 
+            this.textBoxTchCity.Location = new System.Drawing.Point(103, 176);
+            this.textBoxTchCity.Name = "textBoxTchCity";
+            this.textBoxTchCity.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTchCity.TabIndex = 5;
+            // 
+            // textBoxTchCountry
+            // 
+            this.textBoxTchCountry.Location = new System.Drawing.Point(103, 150);
+            this.textBoxTchCountry.Name = "textBoxTchCountry";
+            this.textBoxTchCountry.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTchCountry.TabIndex = 4;
+            // 
+            // textBoxTchID
+            // 
+            this.textBoxTchID.Location = new System.Drawing.Point(103, 124);
+            this.textBoxTchID.Name = "textBoxTchID";
+            this.textBoxTchID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTchID.TabIndex = 3;
+            // 
+            // textBoxTchAge
+            // 
+            this.textBoxTchAge.Location = new System.Drawing.Point(103, 98);
+            this.textBoxTchAge.Name = "textBoxTchAge";
+            this.textBoxTchAge.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTchAge.TabIndex = 2;
+            // 
+            // textBoxTchSurname
+            // 
+            this.textBoxTchSurname.Location = new System.Drawing.Point(103, 72);
+            this.textBoxTchSurname.Name = "textBoxTchSurname";
+            this.textBoxTchSurname.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTchSurname.TabIndex = 1;
+            // 
+            // textBoxTchName
+            // 
+            this.textBoxTchName.Location = new System.Drawing.Point(103, 46);
+            this.textBoxTchName.Name = "textBoxTchName";
+            this.textBoxTchName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTchName.TabIndex = 0;
             // 
             // Form1
             // 
