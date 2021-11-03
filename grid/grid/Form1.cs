@@ -140,10 +140,7 @@ namespace grid
                     treeView1.Nodes[0].Nodes[i].Nodes.Add(lst[j].Name);
                     
                 }
-                
             }
-            
-            
         }
 
         private void comboBoxCreate() 
@@ -164,7 +161,6 @@ namespace grid
             dtCreate(CreateTeachers());
             
         }
-
         
 
         private void button1_Click(object sender, EventArgs e)
@@ -190,10 +186,14 @@ namespace grid
                 }
 
             }
-
             
             chartCreate(stdLst);
             dtCreate(stdLst);
+        }
+
+        private void createStudent() 
+        {
+            Student std = new Student();
         }
     }
 }
