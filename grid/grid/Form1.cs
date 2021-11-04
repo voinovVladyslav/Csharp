@@ -17,7 +17,6 @@ namespace grid
         public Form1()
         {
             InitializeComponent();
-
         }
 
         private void CreateTeachers() 
@@ -105,19 +104,21 @@ namespace grid
 
         public void treeCreate() 
         {
+            treeView1.Nodes.Clear();
             TreeNode root = new TreeNode();
+            
             root.Name = "rootName";
             root.Text = "Teachers";
             treeView1.Nodes.Add(root);
 
             for(int i = 0; i < teacherList.Count; i++)
             {
-                treeView1.Nodes[0].Nodes.Add(teacherList[i].Name);
+                treeView1.Nodes[0].Nodes.Add(teacherList[i].Name + " " + teacherList[i].Surname);
                 for(int j = 0; j < teacherList[i].GetStudentList().Count(); j++)
                 {
                     List<Student> lst = teacherList[i].GetStudentList();
 
-                    treeView1.Nodes[0].Nodes[i].Nodes.Add(lst[j].Name);
+                    treeView1.Nodes[0].Nodes[i].Nodes.Add(lst[j].Name + " " + lst[j].Surname);
                     
                 }
             }
@@ -125,9 +126,12 @@ namespace grid
 
         private void comboBoxCreate() 
         {
+            comboBox1.Items.Clear();
+            comboBox2.Items.Clear();
             for (int i = 0; i < teacherList.Count; i++)
             {
-                comboBox1.Items.Add(teacherList[i].Name);
+                comboBox1.Items.Add(teacherList[i].Name + " " + teacherList[i].Surname);
+                comboBox2.Items.Add(teacherList[i].Name + " " + teacherList[i].Surname);
             }
         }
 
@@ -142,51 +146,121 @@ namespace grid
             
         }
 
+        private void AddTeacher() 
+        {
+            try
+            {
+                string name = textBoxTchName.Text;
+                string surname = textBoxTchSurname.Text;
+                int age = int.Parse(textBoxTchAge.Text);
+                int id = int.Parse(textBoxTchID.Text);
+                string country = textBoxTchCountry.Text;
+                string city = textBoxTchCity.Text;
+                string street = textBoxTchStreet.Text;
+                int houseNumber = int.Parse(textBoxTchHouseNumber.Text);
+            
+                Adress adr = new Adress(country, city, street, houseNumber);
+                Teacher tch = new Teacher(name, surname, age, id, adr);
+                teacherList.Add(tch);
+                MessageBox.Show("Added teacher");
+            }
+            catch { MessageBox.Show("Ne added teacher"); }
+
+            textBoxTchName.Clear();
+            textBoxTchSurname.Clear();
+            textBoxTchAge.Clear();
+            textBoxTchID.Clear();
+            textBoxTchCountry.Clear(); 
+            textBoxTchCity.Clear();
+            textBoxTchStreet.Clear();
+            textBoxTchHouseNumber.Clear();
+        }
+
+        private void AddStudent()
+        {
+            try
+            {
+                string name = textBoxStdName.Text;
+                string surname = textBoxStdSurname.Text;
+                int age = int.Parse(textBoxStdAge.Text);
+                int id = int.Parse(textBoxStdID.Text);
+                int mark = int.Parse(textBoxStdMark.Text);
+                string country = textBoxStdCountry.Text;
+                string city = textBoxStdCity.Text;
+                string street = textBoxStdStreet.Text;
+                int houseNumber = int.Parse(textBoxStdHouseNumber.Text);
+
+                Adress adr = new Adress(country, city, street, houseNumber);
+                Student std = new Student(name, surname, age, id, mark, adr);
+
+                string n = comboBox2.SelectedItem.ToString();
+
+                for (int i = 0; i < teacherList.Count; i++)
+                {
+                    string Na = teacherList[i].Name + " " + teacherList[i].Surname;
+                    if (n == Na)
+                    {
+                        teacherList[i].AddStudent(std);
+                        MessageBox.Show("Added student");
+                    }
+                }
+            }
+            catch { MessageBox.Show("Ne added student"); }
+
+            textBoxStdName.Clear();
+            textBoxStdSurname.Clear();
+            textBoxStdAge.Clear();
+            textBoxStdID.Clear();
+            textBoxStdMark.Clear();
+            textBoxStdCountry.Clear();
+            textBoxStdCity.Clear();
+            textBoxStdStreet.Clear();
+            textBoxStdHouseNumber.Clear();
+            comboBox2.ResetText();
+
+        }
+
+
+        private void buttonTchAdd_Click(object sender, EventArgs e)
+        {
+            AddTeacher();
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            chartCreate(teacherList);
+            treeCreate();
+            comboBoxCreate();
+            dtCreate(teacherList);
+        }
+
+        private void buttonStdAdd_Click(object sender, EventArgs e)
+        {
+            AddStudent();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string n = comboBox1.SelectedItem.ToString();
-            
+
             List<Student> stdLst = new List<Student>();
 
-            for (int i = 0; i < teacherList.Count; i++) 
+            for (int i = 0; i < teacherList.Count; i++)
             {
-                if (teacherList[i].Name == n) 
+                string Na = teacherList[i].Name + " " + teacherList[i].Surname;
+                if (Na == n)
                 {
                     List<Student> lst = teacherList[i].GetStudentList();
 
-                    for (int j = 0; j < lst.Count; j++) 
+                    for (int j = 0; j < lst.Count; j++)
                     {
-                        
+
                         stdLst.Add(lst[j]);
                     }
                 }
             }
             chartCreate(stdLst);
             dtCreate(stdLst);
-        }
-
-        private void AddTeacher() 
-        {
-            string country = textBoxTchCountry.Text;
-            string city = textBoxTchCity.Text;
-            string street = textBoxTchStreet.Text;
-            int houseNumber = int.Parse(textBoxTchHouseNumber.Text);
-
-            Adress adr = new Adress(country, city, street, houseNumber);
-
-            string name = textBoxTchName.Text;
-            string surname = textBoxTchSurname.Text;
-            int age = int.Parse(textBoxTchAge.Text);
-            int id = int.Parse(textBoxTchID.Text);
-
-            Teacher tch = new Teacher(name, surname, age, id, adr);
-            teacherList.Add(tch);
-        }
-
-        private void buttonTchAdd_Click(object sender, EventArgs e)
-        {
-            AddTeacher();
-            
         }
     }
 }
