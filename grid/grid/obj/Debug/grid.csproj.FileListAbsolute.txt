@@ -28,3 +28,5 @@ F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.csproj.GenerateResource.cache
 F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.csproj.CoreCompileInputs.cache
 F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.exe
 F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.pdb
+D:\241\Csharp\grid\grid\obj\Debug\grid.Form2.resources
+D:\241\Csharp\grid\grid\obj\Debug\grid.Form3.resources
