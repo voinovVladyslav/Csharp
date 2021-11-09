@@ -32,3 +32,7 @@ D:\241\Csharp\grid\grid\obj\Debug\grid.Form2.resources
 D:\241\Csharp\grid\grid\obj\Debug\grid.Form3.resources
 D:\241\Csharp\grid\grid\obj\Debug\grid.Form4.resources
 D:\241\Csharp\grid\grid\obj\Debug\grid.Form5.resources
+F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.Form2.resources
+F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.Form3.resources
+F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.Form4.resources
+F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.Form5.resources

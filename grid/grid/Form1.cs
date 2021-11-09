@@ -22,7 +22,7 @@ namespace grid
         {
             Adress adr = new Adress("Ukraine", "Kherson", "Ushakova", 32);
             Teacher t1 = new Teacher("Valera", "Borov", 22, 53252, adr);
-            Teacher t2 = new Teacher("Denis", "Golova", 15, 325234, adr);
+            Teacher t2 = new Teacher("Denis", "Golova", 65, 325234, adr);
             Teacher t3 = new Teacher("Slava", "Ukraintsev", 32, 123423, adr);
 
             DataTranformer.teacherList.Add(t1);
@@ -58,8 +58,9 @@ namespace grid
         {
             chart1.Series["Teachers"].Points.Clear();
             chart1.Series["Students"].Points.Clear();
+
             List<Student> stdList = tch.GetStudentList();
-            chart1.Series["Teachers"].Points.AddXY(tch.Name, tch.Surname);
+            
             for (int i = 0; i < stdList.Count; i++)
             {
                 chart1.Series["Students"].Points.AddXY(stdList[i].Name, stdList[i].Age);
@@ -122,7 +123,6 @@ namespace grid
                     List<Student> lst = DataTranformer.teacherList[i].GetStudentList();
 
                     treeView1.Nodes[0].Nodes[i].Nodes.Add(lst[j].Name + " " + lst[j].Surname);
-                    
                 }
             }
         }
@@ -184,8 +184,7 @@ namespace grid
         private void Button1_Click(object sender, EventArgs e)
         {
             string n = comboBox1.SelectedItem.ToString();
-
-            List<Student> stdLst = new List<Student>();
+            List<Student> stdLst;
 
             for (int i = 0; i < DataTranformer.teacherList.Count; i++)
             {
@@ -193,11 +192,11 @@ namespace grid
                 if (Na == n)
                 {
                     Teacher tch = DataTranformer.teacherList[i];
+                    stdLst = DataTranformer.teacherList[i].GetStudentList();
                     ChartCreate(tch);
+                    DtCreate(stdLst);
                 }
             }
-            
-            DtCreate(stdLst);
         }
     }
 }
