@@ -19,7 +19,7 @@ namespace grid
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            comboBoxCreate();
+            ComboBoxCreate();
         }
 
         private void AddStudent()
@@ -57,7 +57,7 @@ namespace grid
             
         }
 
-        private void comboBoxCreate()
+        private void ComboBoxCreate()
         {
             comboBox2.Items.Clear();
             for (int i = 0; i < DataTranformer.teacherList.Count; i++)
@@ -66,7 +66,7 @@ namespace grid
             }
         }
 
-        private void buttonStdAdd_Click_1(object sender, EventArgs e)
+        private void ButtonStdAdd_Click_1(object sender, EventArgs e)
         {
             AddStudent();
         }

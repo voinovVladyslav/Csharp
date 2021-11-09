@@ -33,5 +33,10 @@ namespace grid
             studentList.Add(std);
         }
 
+        public void RemoveStudent(int index) 
+        {
+            studentList.RemoveAt(index);
+        }
+
     }
 }

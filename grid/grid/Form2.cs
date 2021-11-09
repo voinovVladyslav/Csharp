@@ -47,7 +47,7 @@ namespace grid
 
         
 
-        private void buttonTchAdd_Click_1(object sender, EventArgs e)
+        private void ButtonTchAdd_Click_1(object sender, EventArgs e)
         {
             AddTeacher();
         }

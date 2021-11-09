@@ -44,7 +44,7 @@ namespace grid
             DataTranformer.teacherList[2].AddStudent(s6);
         }
 
-        private void chartCreate(List<Teacher> tchList) 
+        private void ChartCreate(List<Teacher> tchList) 
         {
             chart1.Series["Teachers"].Points.Clear();
             for (int i = 0; i < tchList.Count; i++)
@@ -53,7 +53,7 @@ namespace grid
             }
         }
 
-        private void chartCreate(List<Student> stdList)
+        private void ChartCreate(List<Student> stdList)
         {
             chart1.Series["Students"].Points.Clear();
             for (int i = 0; i < stdList.Count; i++)
@@ -62,7 +62,7 @@ namespace grid
             }
         }
 
-        private void dtCreate(List<Student> stdList)
+        private void DtCreate(List<Student> stdList)
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("Name");
@@ -82,7 +82,7 @@ namespace grid
             dataGridView1.DataSource = dt;
         }
 
-        private void dtCreate(List<Teacher> tchList)
+        private void DtCreate(List<Teacher> tchList)
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("Name");
@@ -101,7 +101,7 @@ namespace grid
             dataGridView2.DataSource = dt;
         }
 
-        public void treeCreate() 
+        public void TreeCreate() 
         {
             treeView1.Nodes.Clear();
             TreeNode root = new TreeNode();
@@ -123,8 +123,9 @@ namespace grid
             }
         }
 
-        private void comboBoxCreate() 
+        private void ComboBoxCreate() 
         {
+            comboBox1.Text = "";
             comboBox1.Items.Clear();
             for (int i = 0; i < DataTranformer.teacherList.Count; i++)
             {
@@ -136,47 +137,47 @@ namespace grid
         {
             CreateTeachers();
 
-            chartCreate(DataTranformer.teacherList);
-            treeCreate();
-            comboBoxCreate();
-            dtCreate(DataTranformer.teacherList);
+            ChartCreate(DataTranformer.teacherList);
+            TreeCreate();
+            ComboBoxCreate();
+            DtCreate(DataTranformer.teacherList);
             
         }
 
-        private void teacherToolStripMenuItem_Click(object sender, EventArgs e)
+        private void TeacherToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 tchForm = new Form2();
             tchForm.Show();
         }
 
-        private void studentToolStripMenuItem_Click(object sender, EventArgs e)
+        private void StudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form3 stdForm = new Form3();
             stdForm.Show();
         }
 
         
-        private void teacherToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void TeacherToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form4 tchFormRemove = new Form4();
             tchFormRemove.Show();
         }
 
-        private void studentToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void StudentToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form5 stdFormRemove = new Form5();
             stdFormRemove.Show();
         }
 
-        private void buttonRefresh_Click(object sender, EventArgs e)
+        private void ButtonRefresh_Click(object sender, EventArgs e)
         {
-            chartCreate(DataTranformer.teacherList);
-            treeCreate();
-            comboBoxCreate();
-            dtCreate(DataTranformer.teacherList);
+            ChartCreate(DataTranformer.teacherList);
+            TreeCreate();
+            ComboBoxCreate();
+            DtCreate(DataTranformer.teacherList);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             string n = comboBox1.SelectedItem.ToString();
 
@@ -196,8 +197,8 @@ namespace grid
                     }
                 }
             }
-            chartCreate(stdLst);
-            dtCreate(stdLst);
+            ChartCreate(stdLst);
+            DtCreate(stdLst);
         }
     }
 }

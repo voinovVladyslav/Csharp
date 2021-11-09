@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -60,7 +60,7 @@
             this.buttonRefresh.TabIndex = 13;
             this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.UseVisualStyleBackColor = true;
-            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            this.buttonRefresh.Click += new System.EventHandler(this.ButtonRefresh_Click);
             // 
             // button1
             // 
@@ -70,7 +70,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Run";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // dataGridView1
             // 
@@ -106,20 +106,20 @@
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(282, 341);
             this.chart1.Name = "chart1";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Teachers";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Students";
-            this.chart1.Series.Add(series7);
-            this.chart1.Series.Add(series8);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Teachers";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Students";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(300, 150);
             this.chart1.TabIndex = 8;
             this.chart1.Text = "chart1";
@@ -147,16 +147,16 @@
             // teacherToolStripMenuItem
             // 
             this.teacherToolStripMenuItem.Name = "teacherToolStripMenuItem";
-            this.teacherToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.teacherToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.teacherToolStripMenuItem.Text = "Teacher";
-            this.teacherToolStripMenuItem.Click += new System.EventHandler(this.teacherToolStripMenuItem_Click);
+            this.teacherToolStripMenuItem.Click += new System.EventHandler(this.TeacherToolStripMenuItem_Click);
             // 
             // studentToolStripMenuItem
             // 
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.studentToolStripMenuItem.Text = "Student";
-            this.studentToolStripMenuItem.Click += new System.EventHandler(this.studentToolStripMenuItem_Click);
+            this.studentToolStripMenuItem.Click += new System.EventHandler(this.StudentToolStripMenuItem_Click);
             // 
             // removeToolStripMenuItem
             // 
@@ -170,16 +170,16 @@
             // teacherToolStripMenuItem1
             // 
             this.teacherToolStripMenuItem1.Name = "teacherToolStripMenuItem1";
-            this.teacherToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.teacherToolStripMenuItem1.Size = new System.Drawing.Size(115, 22);
             this.teacherToolStripMenuItem1.Text = "Teacher";
-            this.teacherToolStripMenuItem1.Click += new System.EventHandler(this.teacherToolStripMenuItem1_Click);
+            this.teacherToolStripMenuItem1.Click += new System.EventHandler(this.TeacherToolStripMenuItem1_Click);
             // 
             // studentToolStripMenuItem1
             // 
             this.studentToolStripMenuItem1.Name = "studentToolStripMenuItem1";
-            this.studentToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.studentToolStripMenuItem1.Size = new System.Drawing.Size(115, 22);
             this.studentToolStripMenuItem1.Text = "Student";
-            this.studentToolStripMenuItem1.Click += new System.EventHandler(this.studentToolStripMenuItem1_Click);
+            this.studentToolStripMenuItem1.Click += new System.EventHandler(this.StudentToolStripMenuItem1_Click);
             // 
             // Form1
             // 
@@ -196,7 +196,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "menu";
+            this.Text = "Main";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

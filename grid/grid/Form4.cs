@@ -19,10 +19,10 @@ namespace grid
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            comboboxCreate();
+            ComboboxCreate();
         }
 
-        private void comboboxCreate() 
+        private void ComboboxCreate() 
         {
             comboBox1.Items.Clear();
             for (int i = 0; i < DataTranformer.teacherList.Count; i++)
@@ -31,7 +31,7 @@ namespace grid
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             string n = comboBox1.SelectedItem.ToString();
             for (int i = 0; i < DataTranformer.teacherList.Count(); i++) 
@@ -39,6 +39,8 @@ namespace grid
                 if (n == DataTranformer.teacherList[i].Name + " " + DataTranformer.teacherList[i].Surname) 
                 {
                     DataTranformer.teacherList.RemoveAt(i);
+                    MessageBox.Show($"Removed {n}");
+                    this.Close();
                 }
             }
         }

@@ -93,7 +93,7 @@
             this.buttonStdAdd.TabIndex = 57;
             this.buttonStdAdd.Text = "CreateS";
             this.buttonStdAdd.UseVisualStyleBackColor = true;
-            this.buttonStdAdd.Click += new System.EventHandler(this.buttonStdAdd_Click_1);
+            this.buttonStdAdd.Click += new System.EventHandler(this.ButtonStdAdd_Click_1);
             // 
             // label18
             // 
@@ -260,7 +260,7 @@
             this.Controls.Add(this.textBoxStdSurname);
             this.Controls.Add(this.textBoxStdName);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Add student";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

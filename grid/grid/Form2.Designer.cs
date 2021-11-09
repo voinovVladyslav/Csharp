@@ -56,7 +56,7 @@
             this.buttonTchAdd.TabIndex = 52;
             this.buttonTchAdd.Text = "CreateT";
             this.buttonTchAdd.UseVisualStyleBackColor = true;
-            this.buttonTchAdd.Click += new System.EventHandler(this.buttonTchAdd_Click_1);
+            this.buttonTchAdd.Click += new System.EventHandler(this.ButtonTchAdd_Click_1);
             // 
             // label17
             // 
@@ -219,7 +219,7 @@
             this.Controls.Add(this.textBoxTchSurname);
             this.Controls.Add(this.textBoxTchName);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Add teacher";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
