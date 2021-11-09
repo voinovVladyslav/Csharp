@@ -199,7 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(232, 301);
             this.Controls.Add(this.buttonTchAdd);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.textBoxTchHouseNumber);

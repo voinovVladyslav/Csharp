@@ -46,19 +46,19 @@ namespace grid
 
         private void chartCreate(List<Teacher> tchList) 
         {
-            chart1.Series["Series1"].Points.Clear();
+            chart1.Series["Teachers"].Points.Clear();
             for (int i = 0; i < tchList.Count; i++)
             {
-                chart1.Series["Series1"].Points.AddXY(tchList[i].Name, tchList[i].Age);
+                chart1.Series["Teachers"].Points.AddXY(tchList[i].Name, tchList[i].Age);
             }
         }
 
         private void chartCreate(List<Student> stdList)
         {
-            chart1.Series["Series1"].Points.Clear();
+            chart1.Series["Students"].Points.Clear();
             for (int i = 0; i < stdList.Count; i++)
             {
-                chart1.Series["Series1"].Points.AddXY(stdList[i].Name, stdList[i].Age);
+                chart1.Series["Students"].Points.AddXY(stdList[i].Name, stdList[i].Age);
             }
         }
 
@@ -143,6 +143,31 @@ namespace grid
             
         }
 
+        private void teacherToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 tchForm = new Form2();
+            tchForm.Show();
+        }
+
+        private void studentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 stdForm = new Form3();
+            stdForm.Show();
+        }
+
+        
+        private void teacherToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form4 tchFormRemove = new Form4();
+            tchFormRemove.Show();
+        }
+
+        private void studentToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form5 stdFormRemove = new Form5();
+            stdFormRemove.Show();
+        }
+
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             chartCreate(DataTranformer.teacherList);
@@ -173,20 +198,6 @@ namespace grid
             }
             chartCreate(stdLst);
             dtCreate(stdLst);
-        }
-
-        
-
-        private void teacherToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form2 tchForm = new Form2();
-            tchForm.Show();
-        }
-
-        private void studentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form3 stdForm = new Form3();
-            stdForm.Show();
         }
     }
 }
