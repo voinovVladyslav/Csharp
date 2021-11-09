@@ -46,6 +46,7 @@ namespace grid
 
         private void ChartCreate(List<Teacher> tchList) 
         {
+            chart1.Series["Students"].Points.Clear();
             chart1.Series["Teachers"].Points.Clear();
             for (int i = 0; i < tchList.Count; i++)
             {
@@ -53,9 +54,12 @@ namespace grid
             }
         }
 
-        private void ChartCreate(List<Student> stdList)
+        private void ChartCreate(Teacher tch)
         {
+            chart1.Series["Teachers"].Points.Clear();
             chart1.Series["Students"].Points.Clear();
+            List<Student> stdList = tch.GetStudentList();
+            chart1.Series["Teachers"].Points.AddXY(tch.Name, tch.Surname);
             for (int i = 0; i < stdList.Count; i++)
             {
                 chart1.Series["Students"].Points.AddXY(stdList[i].Name, stdList[i].Age);
@@ -188,16 +192,11 @@ namespace grid
                 string Na = DataTranformer.teacherList[i].Name + " " + DataTranformer.teacherList[i].Surname;
                 if (Na == n)
                 {
-                    List<Student> lst = DataTranformer.teacherList[i].GetStudentList();
-
-                    for (int j = 0; j < lst.Count; j++)
-                    {
-
-                        stdLst.Add(lst[j]);
-                    }
+                    Teacher tch = DataTranformer.teacherList[i];
+                    ChartCreate(tch);
                 }
             }
-            ChartCreate(stdLst);
+            
             DtCreate(stdLst);
         }
     }
