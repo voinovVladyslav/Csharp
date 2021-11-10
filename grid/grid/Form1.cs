@@ -69,6 +69,7 @@ namespace grid
 
         private void DtCreate(List<Student> stdList)
         {
+            
             DataTable dt = new DataTable();
             dt.Columns.Add("Name");
             dt.Columns.Add("Surname");
@@ -80,11 +81,13 @@ namespace grid
             dt.Columns.Add("Street");
             dt.Columns.Add("House");
             
+            
             foreach (Student i in stdList)
             {
                 dt.Rows.Add(i.Name, i.Surname, i.Age, i.ID, i.Mark, i.Country, i.City, i.Street, i.HouseNumber);
             }
             dataGridView1.DataSource = dt;
+            
         }
 
         private void DtCreate(List<Teacher> tchList)
@@ -197,6 +200,22 @@ namespace grid
                     DtCreate(stdLst);
                 }
             }
+        }
+
+        private void dataGridView2_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string ns = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString() + " " + dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+            MessageBox.Show(ns);
+            pictureBox1.BackgroundImage = Image.FromFile("D:/241/Csharp/grid/grid/myself.jpg");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+        }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string ns = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + " " + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            MessageBox.Show(ns);
+            pictureBox1.BackgroundImage = Image.FromFile("D:/241/Csharp/grid/grid/myself.jpg");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
         }
     }
 }

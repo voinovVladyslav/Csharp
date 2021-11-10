@@ -43,8 +43,9 @@ namespace grid
             catch { MessageBox.Show("Ne added teacher"); }
 
             this.Close();
+            
         }
-
+        
         
 
         private void ButtonTchAdd_Click_1(object sender, EventArgs e)

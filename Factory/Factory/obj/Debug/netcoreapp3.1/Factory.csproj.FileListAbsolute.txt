@@ -12,3 +12,16 @@ F:\Programs\C#\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.csproj.Cor
 F:\Programs\C#\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.dll
 F:\Programs\C#\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.pdb
 F:\Programs\C#\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.genruntimeconfig.cache
+D:\241\Csharp\Factory\Factory\bin\Debug\netcoreapp3.1\Factory.exe
+D:\241\Csharp\Factory\Factory\bin\Debug\netcoreapp3.1\Factory.deps.json
+D:\241\Csharp\Factory\Factory\bin\Debug\netcoreapp3.1\Factory.runtimeconfig.json
+D:\241\Csharp\Factory\Factory\bin\Debug\netcoreapp3.1\Factory.runtimeconfig.dev.json
+D:\241\Csharp\Factory\Factory\bin\Debug\netcoreapp3.1\Factory.dll
+D:\241\Csharp\Factory\Factory\bin\Debug\netcoreapp3.1\Factory.pdb
+D:\241\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.csprojAssemblyReference.cache
+D:\241\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.AssemblyInfoInputs.cache
+D:\241\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.AssemblyInfo.cs
+D:\241\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.csproj.CoreCompileInputs.cache
+D:\241\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.dll
+D:\241\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.pdb
+D:\241\Csharp\Factory\Factory\obj\Debug\netcoreapp3.1\Factory.genruntimeconfig.cache
