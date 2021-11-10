@@ -6,16 +6,26 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace grid
 {
     public partial class Form1 : Form
     {
-
         public Form1()
         {
             InitializeComponent();
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            CreateTeachers();
+
+            ChartCreate(DataTranformer.teacherList);
+            TreeCreate();
+            ComboBoxCreate();
+            DtCreate(DataTranformer.teacherList);
+
         }
 
         private void CreateTeachers() 
@@ -140,17 +150,6 @@ namespace grid
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            CreateTeachers();
-
-            ChartCreate(DataTranformer.teacherList);
-            TreeCreate();
-            ComboBoxCreate();
-            DtCreate(DataTranformer.teacherList);
-            
-        }
-
         private void TeacherToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 tchForm = new Form2();
@@ -184,6 +183,30 @@ namespace grid
             DtCreate(DataTranformer.teacherList);
         }
 
+        private void createPictureBox(string NameSurname) 
+        {
+            for (int i = 0; i < DataTranformer.teacherList.Count; i++)
+            {
+                if (NameSurname == DataTranformer.teacherList[i].ToString())
+                {
+                    try { pictureBox1.BackgroundImage = Image.FromFile(DataTranformer.teacherList[i].Img); }
+                    catch { pictureBox1.BackgroundImage = Image.FromFile(DataTranformer.exeptionDir); }
+                    finally { pictureBox1.BackgroundImageLayout = ImageLayout.Stretch; }
+                }
+                List<Student> stdList = DataTranformer.teacherList[i].GetStudentList();
+
+                for (int j = 0; j < stdList.Count; j++) 
+                {
+                    if (NameSurname == stdList[j].ToString())
+                    {
+                        try { pictureBox1.BackgroundImage = Image.FromFile(stdList[j].Img); }
+                        catch { pictureBox1.BackgroundImage = Image.FromFile(DataTranformer.exeptionDir); }
+                        finally { pictureBox1.BackgroundImageLayout = ImageLayout.Stretch; }
+                    }
+                }
+            }
+        }
+
         private void Button1_Click(object sender, EventArgs e)
         {
             string n = comboBox1.SelectedItem.ToString();
@@ -205,17 +228,13 @@ namespace grid
         private void dataGridView2_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             string ns = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString() + " " + dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-            MessageBox.Show(ns);
-            pictureBox1.BackgroundImage = Image.FromFile("D:/241/Csharp/grid/grid/myself.jpg");
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            createPictureBox(ns);
         }
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             string ns = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + " " + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            MessageBox.Show(ns);
-            pictureBox1.BackgroundImage = Image.FromFile("D:/241/Csharp/grid/grid/myself.jpg");
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            createPictureBox(ns);
         }
     }
 }

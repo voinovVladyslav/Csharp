@@ -12,6 +12,7 @@ namespace grid
         string surname;
         int age;
         int id;
+        string img;
         Adress adress;
 
         public string Name 
@@ -55,6 +56,11 @@ namespace grid
             get { return adress.HouseNumber; }
         }
 
+        public string Img 
+        {
+            set { img = value; }
+            get { return img; }
+        }
         public Human() 
         { }
 
@@ -65,6 +71,23 @@ namespace grid
             age = Age;
             id = ID;
             adress = adr;
+            img = DataTranformer.dir + this.ToString() + ".jpg";
         }
+
+        public Human(string Name, string Surname, int Age, int ID, Adress adr, string Img)
+        {
+            name = Name;
+            surname = Surname;
+            age = Age;
+            id = ID;
+            adress = adr;
+            img = DataTranformer.dir + Img;
+        }
+
+        public override string ToString()
+        {
+            return Name + " " + Surname;
+        }
+
     }
 }
