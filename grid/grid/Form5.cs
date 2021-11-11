@@ -26,7 +26,7 @@ namespace grid
         {
             for (int i = 0; i < DataTranformer.teacherList.Count(); i++)  
             {
-                List<Student> stdList = DataTranformer.teacherList[i].GetStudentList();
+                List<Student> stdList = DataTranformer.teacherList[i].StudentList;
 
                 for (int j = 0; j < stdList.Count(); j++) 
                 {
@@ -41,7 +41,7 @@ namespace grid
 
             for (int i = 0; i < DataTranformer.teacherList.Count(); i++)
             {
-                List<Student> stdList = DataTranformer.teacherList[i].GetStudentList();
+                List<Student> stdList = DataTranformer.teacherList[i].StudentList;
 
                 for (int j = 0; j < stdList.Count(); j++)
                 {

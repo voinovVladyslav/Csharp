@@ -35,32 +35,17 @@ namespace grid
             set {id = value; }
             get { return id; }
         }
-        public string Country
+        public Adress Adress 
         {
-            set { adress.Country = value; }
-            get { return adress.Country; }
+            set { adress = value; }
+            get { return adress; }
         }
-        public string City
-        {
-            set { adress.City = value; }
-            get { return adress.City; }
-        }
-        public string Street
-        {
-            set { adress.Street = value; }
-            get { return adress.Street; }
-        }
-        public int HouseNumber
-        {
-            set { adress.HouseNumber = value; }
-            get { return adress.HouseNumber; }
-        }
-
         public string Img 
         {
             set { img = value; }
             get { return img; }
         }
+
         public Human() 
         { }
 

@@ -36,3 +36,5 @@ F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.Form2.resources
 F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.Form3.resources
 F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.Form4.resources
 F:\Programs\C#\Csharp\grid\grid\obj\Debug\grid.Form5.resources
+F:\Programs\C#\Csharp\grid\grid\bin\Debug\Newtonsoft.Json.dll
+F:\Programs\C#\Csharp\grid\grid\bin\Debug\Newtonsoft.Json.xml

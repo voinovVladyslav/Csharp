@@ -15,10 +15,7 @@ namespace grid
             get { return studentList; }
         }
 
-        public List<Student> GetStudentList() 
-        {
-            return studentList;
-        }
+        
             
         public Teacher() { }
 
