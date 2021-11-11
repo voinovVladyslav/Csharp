@@ -16,6 +16,7 @@ namespace grid
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
@@ -27,7 +28,6 @@ namespace grid
             TreeCreate();
             ComboBoxCreate();
             DtCreate(DataTranformer.teacherList);
-
         }
 
         private void ChartCreate(List<Teacher> tchList) 
@@ -94,6 +94,7 @@ namespace grid
             }
             dataGridView2.DataSource = dt;
         }
+        
 
         public void TreeCreate() 
         {
@@ -162,15 +163,19 @@ namespace grid
             TreeCreate();
             ComboBoxCreate();
             DtCreate(DataTranformer.teacherList);
+            List<Student> std = new List<Student>();
+            DtCreate(std);
+            pictureBox1.Hide();
         }
 
         private void createPictureBox(string NameSurname) 
         {
+            pictureBox1.Show();
             for (int i = 0; i < DataTranformer.teacherList.Count; i++)
             {
                 if (NameSurname == DataTranformer.teacherList[i].ToString())
                 {
-                    try { pictureBox1.BackgroundImage = Image.FromFile(DataTranformer.teacherList[i].Img); }
+                    try { pictureBox1.BackgroundImage = Image.FromFile(DataTranformer.PathToFiles() + DataTranformer.teacherList[i].Img); }
                     catch { pictureBox1.BackgroundImage = Image.FromFile(DataTranformer.exeptionDir); }
                     finally { pictureBox1.BackgroundImageLayout = ImageLayout.Stretch; }
                 }
@@ -180,7 +185,7 @@ namespace grid
                 {
                     if (NameSurname == stdList[j].ToString())
                     {
-                        try { pictureBox1.BackgroundImage = Image.FromFile(stdList[j].Img); }
+                        try { pictureBox1.BackgroundImage = Image.FromFile(DataTranformer.PathToFiles() + stdList[j].Img); }
                         catch { pictureBox1.BackgroundImage = Image.FromFile(DataTranformer.exeptionDir); }
                         finally { pictureBox1.BackgroundImageLayout = ImageLayout.Stretch; }
                     }
@@ -222,11 +227,6 @@ namespace grid
         {
             SaveTeachers();
             MessageBox.Show("Saved");
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            DataTranformer.Load();
         }
     }
 }

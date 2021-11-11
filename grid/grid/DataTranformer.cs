@@ -17,7 +17,7 @@ namespace grid
         public static string exeptionDir = PathToFiles() + "404.jpg";
         public static string saveDir = PathToFiles() + "Teachers.json";
 
-        private static string PathToFiles()
+        public static string PathToFiles()
         {
             string path = Environment.CurrentDirectory;
             string path2 = path.Substring(0, path.LastIndexOf("bin")) + "Data" + "\\";

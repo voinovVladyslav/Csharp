@@ -56,7 +56,7 @@ namespace grid
             age = Age;
             id = ID;
             adress = adr;
-            img = DataTranformer.dir + this.ToString() + ".jpg";
+            img = this.ToString() + ".jpg";
         }
 
         public Human(string Name, string Surname, int Age, int ID, Adress adr, string Img)
