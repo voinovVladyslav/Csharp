@@ -30,13 +30,14 @@ namespace grid
                 string surname = textBoxTchSurname.Text;
                 int age = int.Parse(textBoxTchAge.Text);
                 int id = int.Parse(textBoxTchID.Text);
+                int limit = int.Parse(textBoxTchLimit.Text);
                 string country = textBoxTchCountry.Text;
                 string city = textBoxTchCity.Text;
                 string street = textBoxTchStreet.Text;
                 int houseNumber = int.Parse(textBoxTchHouseNumber.Text);
 
                 Adress adr = new Adress(country, city, street, houseNumber);
-                Teacher tch = new Teacher(name, surname, age, id, adr);
+                Teacher tch = new Teacher(name, surname, age, id, limit, adr);
                 DataTranformer.teacherList.Add(tch);
                 MessageBox.Show("Added teacher");
             }
@@ -51,6 +52,7 @@ namespace grid
         private void ButtonTchAdd_Click_1(object sender, EventArgs e)
         {
             AddTeacher();
+            
         }
     }
 }

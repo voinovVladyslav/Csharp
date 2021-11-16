@@ -46,11 +46,13 @@
             this.textBoxTchAge = new System.Windows.Forms.TextBox();
             this.textBoxTchSurname = new System.Windows.Forms.TextBox();
             this.textBoxTchName = new System.Windows.Forms.TextBox();
+            this.textBoxTchLimit = new System.Windows.Forms.TextBox();
+            this.labelLimit = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonTchAdd
             // 
-            this.buttonTchAdd.Location = new System.Drawing.Point(98, 266);
+            this.buttonTchAdd.Location = new System.Drawing.Point(98, 292);
             this.buttonTchAdd.Name = "buttonTchAdd";
             this.buttonTchAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonTchAdd.TabIndex = 52;
@@ -69,7 +71,7 @@
             // 
             // textBoxTchHouseNumber
             // 
-            this.textBoxTchHouseNumber.Location = new System.Drawing.Point(98, 224);
+            this.textBoxTchHouseNumber.Location = new System.Drawing.Point(98, 250);
             this.textBoxTchHouseNumber.Name = "textBoxTchHouseNumber";
             this.textBoxTchHouseNumber.Size = new System.Drawing.Size(100, 20);
             this.textBoxTchHouseNumber.TabIndex = 50;
@@ -77,7 +79,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 227);
+            this.label8.Location = new System.Drawing.Point(16, 253);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 13);
             this.label8.TabIndex = 49;
@@ -86,7 +88,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 201);
+            this.label7.Location = new System.Drawing.Point(16, 227);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 48;
@@ -95,7 +97,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 175);
+            this.label6.Location = new System.Drawing.Point(16, 201);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(24, 13);
             this.label6.TabIndex = 47;
@@ -104,7 +106,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 149);
+            this.label5.Location = new System.Drawing.Point(16, 175);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 46;
@@ -148,21 +150,21 @@
             // 
             // textBoxTchStreet
             // 
-            this.textBoxTchStreet.Location = new System.Drawing.Point(98, 198);
+            this.textBoxTchStreet.Location = new System.Drawing.Point(98, 224);
             this.textBoxTchStreet.Name = "textBoxTchStreet";
             this.textBoxTchStreet.Size = new System.Drawing.Size(100, 20);
             this.textBoxTchStreet.TabIndex = 41;
             // 
             // textBoxTchCity
             // 
-            this.textBoxTchCity.Location = new System.Drawing.Point(98, 172);
+            this.textBoxTchCity.Location = new System.Drawing.Point(98, 198);
             this.textBoxTchCity.Name = "textBoxTchCity";
             this.textBoxTchCity.Size = new System.Drawing.Size(100, 20);
             this.textBoxTchCity.TabIndex = 40;
             // 
             // textBoxTchCountry
             // 
-            this.textBoxTchCountry.Location = new System.Drawing.Point(98, 146);
+            this.textBoxTchCountry.Location = new System.Drawing.Point(98, 172);
             this.textBoxTchCountry.Name = "textBoxTchCountry";
             this.textBoxTchCountry.Size = new System.Drawing.Size(100, 20);
             this.textBoxTchCountry.TabIndex = 39;
@@ -195,11 +197,29 @@
             this.textBoxTchName.Size = new System.Drawing.Size(100, 20);
             this.textBoxTchName.TabIndex = 35;
             // 
+            // textBoxTchLimit
+            // 
+            this.textBoxTchLimit.Location = new System.Drawing.Point(98, 146);
+            this.textBoxTchLimit.Name = "textBoxTchLimit";
+            this.textBoxTchLimit.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTchLimit.TabIndex = 53;
+            // 
+            // labelLimit
+            // 
+            this.labelLimit.AutoSize = true;
+            this.labelLimit.Location = new System.Drawing.Point(16, 149);
+            this.labelLimit.Name = "labelLimit";
+            this.labelLimit.Size = new System.Drawing.Size(28, 13);
+            this.labelLimit.TabIndex = 54;
+            this.labelLimit.Text = "Limit";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(232, 301);
+            this.ClientSize = new System.Drawing.Size(232, 327);
+            this.Controls.Add(this.labelLimit);
+            this.Controls.Add(this.textBoxTchLimit);
             this.Controls.Add(this.buttonTchAdd);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.textBoxTchHouseNumber);
@@ -246,5 +266,7 @@
         private System.Windows.Forms.TextBox textBoxTchAge;
         private System.Windows.Forms.TextBox textBoxTchSurname;
         private System.Windows.Forms.TextBox textBoxTchName;
+        private System.Windows.Forms.TextBox textBoxTchLimit;
+        private System.Windows.Forms.Label labelLimit;
     }
 }

@@ -29,5 +29,6 @@ namespace grid
         {
             teacherList = JsonConvert.DeserializeObject<List<Teacher>>(File.ReadAllText(saveDir));
         }
+        
     }
 }

@@ -71,6 +71,7 @@ namespace grid
             foreach (Student i in stdList)
             {
                 dt.Rows.Add(i.Name, i.Surname, i.Age, i.ID, i.Grade, i.Adress.Country, i.Adress.City, i.Adress.Street, i.Adress.HouseNumber);
+                
             }
             dataGridView1.DataSource = dt;
             
@@ -83,26 +84,43 @@ namespace grid
             dt.Columns.Add("Surname");
             dt.Columns.Add("Age");
             dt.Columns.Add("ID");
+            dt.Columns.Add("Limit");
             dt.Columns.Add("Country");
             dt.Columns.Add("City");
             dt.Columns.Add("Street");
             dt.Columns.Add("House");
 
+            
             foreach (Teacher i in tchList)
             {
-                dt.Rows.Add(i.Name, i.Surname, i.Age, i.ID, i.Adress.Country, i.Adress.City, i.Adress.Street, i.Adress.HouseNumber);
+                dt.Rows.Add(i.Name, i.Surname, i.Age, i.ID, i.Limit, i.Adress.Country, i.Adress.City, i.Adress.Street, i.Adress.HouseNumber);
+                
             }
             dataGridView2.DataSource = dt;
+
+            for (int i = 0; i < DataTranformer.teacherList.Count; i++) 
+            {
+                
+                if (DataTranformer.teacherList[i].StudentList.Count < Convert.ToInt32(dataGridView2.Rows[i].Cells[4].Value.ToString()))
+                {
+                    dataGridView2.Rows[i].Cells[4].Style.BackColor = Color.Green;
+                }
+                else 
+                {
+                    dataGridView2.Rows[i].Cells[4].Style.BackColor = Color.Red;
+                }
+            }
         }
         
 
         public void TreeCreate() 
         {
             treeView1.Nodes.Clear();
-            TreeNode root = new TreeNode();
-            
-            root.Name = "rootName";
-            root.Text = "Teachers";
+            TreeNode root = new TreeNode
+            {
+                Name = "rootName",
+                Text = "Teachers"
+            };
 
             treeView1.Nodes.Add(root);
 
@@ -158,9 +176,16 @@ namespace grid
         }
         private void findToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form7 f7 = new Form7();
+            f7.Show();
         }
         private void ButtonRefresh_Click(object sender, EventArgs e)
+        {
+            RefreshData();
+            
+        }
+
+        private void RefreshData() 
         {
             ChartCreate(DataTranformer.teacherList);
             TreeCreate();
@@ -168,27 +193,29 @@ namespace grid
             DtCreate(DataTranformer.teacherList);
             List<Student> std = new List<Student>();
             DtCreate(std);
-            
         }
-
         
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            string n = comboBox1.SelectedItem.ToString();
-            List<Student> stdLst;
-
-            for (int i = 0; i < DataTranformer.teacherList.Count; i++)
+            try
             {
-                string Na = DataTranformer.teacherList[i].Name + " " + DataTranformer.teacherList[i].Surname;
-                if (Na == n)
+                string n = comboBox1.SelectedItem.ToString();
+                List<Student> stdLst;
+
+                for (int i = 0; i < DataTranformer.teacherList.Count; i++)
                 {
-                    Teacher tch = DataTranformer.teacherList[i];
-                    stdLst = DataTranformer.teacherList[i].StudentList;
-                    ChartCreate(tch);
-                    DtCreate(stdLst);
+                    string Na = DataTranformer.teacherList[i].Name + " " + DataTranformer.teacherList[i].Surname;
+                    if (Na == n)
+                    {
+                        Teacher tch = DataTranformer.teacherList[i];
+                        stdLst = DataTranformer.teacherList[i].StudentList;
+                        ChartCreate(tch);
+                        DtCreate(stdLst);
+                    }
                 }
             }
+            catch { MessageBox.Show("Error"); }
         }
 
         private void dataGridView2_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -200,9 +227,9 @@ namespace grid
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            DataTranformer.name = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + " " + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            Form6 f = new Form6();
-            f.Show();
+                DataTranformer.name = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + " " + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                Form6 f = new Form6();
+                f.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -62,7 +62,8 @@ namespace grid
             comboBox2.Items.Clear();
             for (int i = 0; i < DataTranformer.teacherList.Count; i++)
             {
-                comboBox2.Items.Add(DataTranformer.teacherList[i].Name + " " + DataTranformer.teacherList[i].Surname);
+                if (DataTranformer.teacherList[i].StudentList.Count < DataTranformer.teacherList[i].Limit) 
+                    comboBox2.Items.Add(DataTranformer.teacherList[i].Name + " " + DataTranformer.teacherList[i].Surname);
             }
         }
 
