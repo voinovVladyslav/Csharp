@@ -16,6 +16,7 @@ namespace grid
         public static string dir = PathToFiles();
         public static string exeptionDir = PathToFiles() + "404.jpg";
         public static string saveDir = PathToFiles() + "Teachers.json";
+        public static string name;
 
         public static string PathToFiles()
         {

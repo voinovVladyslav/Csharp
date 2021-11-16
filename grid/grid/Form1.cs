@@ -156,7 +156,10 @@ namespace grid
             Form5 stdFormRemove = new Form5();
             stdFormRemove.Show();
         }
+        private void findToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+        }
         private void ButtonRefresh_Click(object sender, EventArgs e)
         {
             ChartCreate(DataTranformer.teacherList);
@@ -165,33 +168,10 @@ namespace grid
             DtCreate(DataTranformer.teacherList);
             List<Student> std = new List<Student>();
             DtCreate(std);
-            pictureBox1.Hide();
+            
         }
 
-        private void createPictureBox(string NameSurname) 
-        {
-            pictureBox1.Show();
-            for (int i = 0; i < DataTranformer.teacherList.Count; i++)
-            {
-                if (NameSurname == DataTranformer.teacherList[i].ToString())
-                {
-                    try { pictureBox1.BackgroundImage = Image.FromFile(DataTranformer.PathToFiles() + DataTranformer.teacherList[i].Img); }
-                    catch { pictureBox1.BackgroundImage = Image.FromFile(DataTranformer.exeptionDir); }
-                    finally { pictureBox1.BackgroundImageLayout = ImageLayout.Stretch; }
-                }
-                List<Student> stdList = DataTranformer.teacherList[i].StudentList;
-
-                for (int j = 0; j < stdList.Count; j++) 
-                {
-                    if (NameSurname == stdList[j].ToString())
-                    {
-                        try { pictureBox1.BackgroundImage = Image.FromFile(DataTranformer.PathToFiles() + stdList[j].Img); }
-                        catch { pictureBox1.BackgroundImage = Image.FromFile(DataTranformer.exeptionDir); }
-                        finally { pictureBox1.BackgroundImageLayout = ImageLayout.Stretch; }
-                    }
-                }
-            }
-        }
+        
 
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -213,14 +193,16 @@ namespace grid
 
         private void dataGridView2_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            string ns = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString() + " " + dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-            createPictureBox(ns);
+            DataTranformer.name = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString() + " " + dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+            Form6 f = new Form6();
+            f.Show();
         }
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            string ns = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + " " + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            createPictureBox(ns);
+            DataTranformer.name = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + " " + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            Form6 f = new Form6();
+            f.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -228,5 +210,7 @@ namespace grid
             SaveTeachers();
             MessageBox.Show("Saved");
         }
+
+       
     }
 }
