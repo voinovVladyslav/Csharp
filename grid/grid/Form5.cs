@@ -12,6 +12,9 @@ namespace grid
 {
     public partial class Form5 : Form
     {
+        public delegate void dlgt();
+
+        public static event dlgt EventDlgt;
         public Form5()
         {
             InitializeComponent();
@@ -50,6 +53,7 @@ namespace grid
                         DataTranformer.teacherList[i].RemoveStudent(j);
                         MessageBox.Show($"Removed {n}");
                         this.Close();
+                        EventDlgt?.Invoke();
                     }
                 }
             }

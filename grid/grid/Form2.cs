@@ -12,6 +12,10 @@ namespace grid
 {
     public partial class Form2 : Form
     {
+        public delegate void dlgt();
+
+        public static event dlgt EventDlgt;
+
         public Form2()
         {
             InitializeComponent();
@@ -40,6 +44,8 @@ namespace grid
                 Teacher tch = new Teacher(name, surname, age, id, limit, adr);
                 DataTranformer.teacherList.Add(tch);
                 MessageBox.Show("Added teacher");
+
+                EventDlgt?.Invoke();
             }
             catch { MessageBox.Show("Ne added teacher"); }
 

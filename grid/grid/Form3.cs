@@ -12,6 +12,10 @@ namespace grid
 {
     public partial class Form3 : Form
     {
+        public delegate void dlgt();
+
+        public static event dlgt EventDlgt;
+
         public Form3()
         {
             InitializeComponent();
@@ -50,6 +54,7 @@ namespace grid
                         MessageBox.Show("Added student");
                     }
                 }
+                EventDlgt?.Invoke();
             }
             catch { MessageBox.Show("Ne added student"); }
 

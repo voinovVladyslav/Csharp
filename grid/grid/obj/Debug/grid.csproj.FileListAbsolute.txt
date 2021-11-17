@@ -74,3 +74,22 @@ F:\Programming\C#\Csharp\grid\grid\obj\Debug\grid.csproj.GenerateResource.cache
 F:\Programming\C#\Csharp\grid\grid\obj\Debug\grid.csproj.CoreCompileInputs.cache
 F:\Programming\C#\Csharp\grid\grid\obj\Debug\grid.exe
 F:\Programming\C#\Csharp\grid\grid\obj\Debug\grid.pdb
+D:\voinov 241\Csharp\grid\grid\bin\Debug\grid.exe.config
+D:\voinov 241\Csharp\grid\grid\bin\Debug\grid.exe
+D:\voinov 241\Csharp\grid\grid\bin\Debug\grid.pdb
+D:\voinov 241\Csharp\grid\grid\bin\Debug\Newtonsoft.Json.dll
+D:\voinov 241\Csharp\grid\grid\bin\Debug\Newtonsoft.Json.xml
+D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.csprojAssemblyReference.cache
+D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.Form1.resources
+D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.Form2.resources
+D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.Form3.resources
+D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.Form4.resources
+D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.Form5.resources
+D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.Form6.resources
+D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.Form7.resources
+D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.Properties.Resources.resources
+D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.csproj.GenerateResource.cache
+D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.csproj.CoreCompileInputs.cache
+D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.csproj.CopyComplete
+D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.exe
+D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.pdb

@@ -17,12 +17,17 @@ namespace grid
     public partial class Form1 : Form
     {
         
-        public Form1()
+        public Form1() 
         {
             InitializeComponent();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            Form2.EventDlgt += RefreshData;
+            Form3.EventDlgt += RefreshData;
+            Form4.EventDlgt += RefreshData;
+            Form5.EventDlgt += RefreshData;
+
             DataTranformer.Load();
             ChartCreate(DataTranformer.teacherList);
             TreeCreate();
@@ -134,6 +139,7 @@ namespace grid
                     treeView1.Nodes[0].Nodes[i].Nodes.Add(lst[j].Name + " " + lst[j].Surname);
                 }
             }
+            treeView1.ExpandAll();
         }
 
         private void ComboBoxCreate() 
@@ -220,16 +226,24 @@ namespace grid
 
         private void dataGridView2_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            DataTranformer.name = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString() + " " + dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-            Form6 f = new Form6();
-            f.Show();
+            try
+            {
+                DataTranformer.name = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString() + " " + dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+                Form6 f = new Form6();
+                f.Show();
+            }
+            catch { MessageBox.Show("Error"); }
         }
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            try
+            {
                 DataTranformer.name = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + " " + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 Form6 f = new Form6();
                 f.Show();
+            }
+            catch { MessageBox.Show("Error"); }
         }
 
         private void button2_Click(object sender, EventArgs e)
