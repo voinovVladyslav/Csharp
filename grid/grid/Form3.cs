@@ -26,6 +26,8 @@ namespace grid
         private void Form3_Load(object sender, EventArgs e)
         {
             ComboBoxCreate();
+            pictureBox1.BackgroundImage = Image.FromFile(DataTranformer.exeptionDir);
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void AddStudent()
@@ -45,7 +47,8 @@ namespace grid
                 Adress adr = new Adress(country, city, street, houseNumber);
                 Student std = new Student(name, surname, age, id, mark, adr);
 
-                File.Copy(filename, DataTranformer.PathToFiles() + std.Img);
+                try { File.Copy(filename, DataTranformer.PathToFiles() + std.Img); }
+                catch { }
 
                 string n = comboBox2.SelectedItem.ToString();
 

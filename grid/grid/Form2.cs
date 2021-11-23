@@ -26,7 +26,8 @@ namespace grid
         
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+            pictureBox1.BackgroundImage = Image.FromFile(DataTranformer.exeptionDir);
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
         }
         
         private void AddTeacher()
@@ -46,7 +47,8 @@ namespace grid
                 Adress adr = new Adress(country, city, street, houseNumber);
                 Teacher tch = new Teacher(name, surname, age, id, limit, adr);
 
-                File.Copy(filename, DataTranformer.PathToFiles() + tch.Img);
+                try { File.Copy(filename, DataTranformer.PathToFiles() + tch.Img); }
+                catch { }
 
                 DataTranformer.teacherList.Add(tch);
                 MessageBox.Show("Added teacher");
