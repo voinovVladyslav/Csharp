@@ -50,6 +50,9 @@
             this.textBoxStdAge = new System.Windows.Forms.TextBox();
             this.textBoxStdSurname = new System.Windows.Forms.TextBox();
             this.textBoxStdName = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label20
@@ -87,7 +90,7 @@
             // 
             // buttonStdAdd
             // 
-            this.buttonStdAdd.Location = new System.Drawing.Point(139, 321);
+            this.buttonStdAdd.Location = new System.Drawing.Point(27, 321);
             this.buttonStdAdd.Name = "buttonStdAdd";
             this.buttonStdAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonStdAdd.TabIndex = 57;
@@ -232,11 +235,31 @@
             this.textBoxStdName.Size = new System.Drawing.Size(129, 20);
             this.textBoxStdName.TabIndex = 40;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(254, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(351, 275);
+            this.pictureBox1.TabIndex = 62;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(110, 321);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 23);
+            this.button1.TabIndex = 63;
+            this.button1.Text = "Add image ( .jpg)";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(260, 351);
+            this.ClientSize = new System.Drawing.Size(617, 356);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label19);
@@ -262,6 +285,7 @@
             this.Name = "Form3";
             this.Text = "Add student";
             this.Load += new System.EventHandler(this.Form3_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,5 +315,7 @@
         private System.Windows.Forms.TextBox textBoxStdAge;
         private System.Windows.Forms.TextBox textBoxStdSurname;
         private System.Windows.Forms.TextBox textBoxStdName;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

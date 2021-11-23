@@ -48,11 +48,14 @@
             this.textBoxTchName = new System.Windows.Forms.TextBox();
             this.textBoxTchLimit = new System.Windows.Forms.TextBox();
             this.labelLimit = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonTchAdd
             // 
-            this.buttonTchAdd.Location = new System.Drawing.Point(98, 292);
+            this.buttonTchAdd.Location = new System.Drawing.Point(12, 293);
             this.buttonTchAdd.Name = "buttonTchAdd";
             this.buttonTchAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonTchAdd.TabIndex = 52;
@@ -213,11 +216,31 @@
             this.labelLimit.TabIndex = 54;
             this.labelLimit.Text = "Limit";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(218, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(351, 275);
+            this.pictureBox1.TabIndex = 55;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(98, 293);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "Add image ( .jpg)";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(232, 327);
+            this.ClientSize = new System.Drawing.Size(581, 327);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelLimit);
             this.Controls.Add(this.textBoxTchLimit);
             this.Controls.Add(this.buttonTchAdd);
@@ -241,6 +264,7 @@
             this.Name = "Form2";
             this.Text = "Add teacher";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,5 +292,7 @@
         private System.Windows.Forms.TextBox textBoxTchName;
         private System.Windows.Forms.TextBox textBoxTchLimit;
         private System.Windows.Forms.Label labelLimit;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

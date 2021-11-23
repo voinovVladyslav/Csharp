@@ -64,7 +64,7 @@ namespace grid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(199, 77);
+            this.ClientSize = new System.Drawing.Size(196, 78);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxFind);
             this.Controls.Add(this.buttonFind);

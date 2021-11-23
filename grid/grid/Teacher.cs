@@ -29,6 +29,13 @@ namespace grid
             limit = Limit;
         }
 
+        public Teacher(string Name, string Surname, int Age, int ID, int Limit, string Img, Adress adr) :
+            base(Name, Surname, Age, ID, adr, Img)
+        {
+            limit = Limit;
+            
+        }
+
         public void AddStudent(Student std)
         {
             if (studentList.Count <= limit)

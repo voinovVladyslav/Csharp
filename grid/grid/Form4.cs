@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace grid
 {
@@ -40,9 +41,11 @@ namespace grid
             string n = comboBox1.SelectedItem.ToString();
             for (int i = 0; i < DataTranformer.teacherList.Count(); i++) 
             {
-                if (n == DataTranformer.teacherList[i].Name + " " + DataTranformer.teacherList[i].Surname) 
+                if (n == DataTranformer.teacherList[i].ToString()) 
                 {
+                    File.Delete(DataTranformer.PathToFiles() + DataTranformer.teacherList[i].Img);
                     DataTranformer.teacherList.RemoveAt(i);
+                    
                     MessageBox.Show($"Removed {n}");
                     this.Close();
                     EventDlgt?.Invoke();

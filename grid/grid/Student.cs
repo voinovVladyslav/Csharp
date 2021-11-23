@@ -23,5 +23,10 @@ namespace grid
         {
             grade = Grade;
         }
+        public Student(string Name, string Surname, int Age, int ID, int Grade, Adress adr, string Img) :
+            base(Name, Surname, Age, ID, adr, Img)
+        {
+            grade = Grade;
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace grid
 {
@@ -33,7 +34,7 @@ namespace grid
 
                 for (int j = 0; j < stdList.Count(); j++) 
                 {
-                    comboBoxStudents.Items.Add(stdList[j].Name + " " + stdList[j].Surname);
+                    comboBoxStudents.Items.Add(stdList[j].ToString());
                 }
             }
         }
@@ -48,8 +49,9 @@ namespace grid
 
                 for (int j = 0; j < stdList.Count(); j++)
                 {
-                    if (n == stdList[j].Name + " " + stdList[j].Surname) 
+                    if (n == stdList[j].ToString()) 
                     {
+                        File.Delete(DataTranformer.PathToFiles() + DataTranformer.teacherList[i].StudentList[j].Img);
                         DataTranformer.teacherList[i].RemoveStudent(j);
                         MessageBox.Show($"Removed {n}");
                         this.Close();

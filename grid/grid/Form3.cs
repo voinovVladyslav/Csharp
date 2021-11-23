@@ -7,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace grid
 {
     public partial class Form3 : Form
     {
         public delegate void dlgt();
-
         public static event dlgt EventDlgt;
+
+        private string filename;
 
         public Form3()
         {
@@ -42,6 +44,8 @@ namespace grid
 
                 Adress adr = new Adress(country, city, street, houseNumber);
                 Student std = new Student(name, surname, age, id, mark, adr);
+
+                File.Copy(filename, DataTranformer.PathToFiles() + std.Img);
 
                 string n = comboBox2.SelectedItem.ToString();
 
@@ -75,6 +79,20 @@ namespace grid
         private void ButtonStdAdd_Click_1(object sender, EventArgs e)
         {
             AddStudent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Images(*.jpg)|*.jpg|All files(*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            filename = openFileDialog.FileName;
+
+            pictureBox1.BackgroundImage = Image.FromFile(filename);
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
         }
     }
 }
