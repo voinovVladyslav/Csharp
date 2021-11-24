@@ -16,8 +16,8 @@ namespace grid
 {
     public partial class Form1 : Form
     {
-        
-        public Form1() 
+
+        public Form1()
         {
             InitializeComponent();
         }
@@ -35,7 +35,7 @@ namespace grid
             DtCreate(DataTranformer.teacherList);
         }
 
-        private void ChartCreate(List<Teacher> tchList) 
+        private void ChartCreate(List<Teacher> tchList)
         {
             chart1.Series["Students"].Points.Clear();
             chart1.Series["Teachers"].Points.Clear();
@@ -51,7 +51,7 @@ namespace grid
             chart1.Series["Students"].Points.Clear();
 
             List<Student> stdList = tch.StudentList;
-            
+
             for (int i = 0; i < stdList.Count; i++)
             {
                 chart1.Series["Students"].Points.AddXY(stdList[i].Name, stdList[i].Age);
@@ -60,7 +60,7 @@ namespace grid
 
         private void DtCreate(List<Student> stdList)
         {
-            
+
             DataTable dt = new DataTable();
             dt.Columns.Add("Name");
             dt.Columns.Add("Surname");
@@ -71,15 +71,15 @@ namespace grid
             dt.Columns.Add("City");
             dt.Columns.Add("Street");
             dt.Columns.Add("House");
-            
-            
+
+
             foreach (Student i in stdList)
             {
                 dt.Rows.Add(i.Name, i.Surname, i.Age, i.ID, i.Grade, i.Adress.Country, i.Adress.City, i.Adress.Street, i.Adress.HouseNumber);
-                
+
             }
             dataGridView1.DataSource = dt;
-            
+
         }
 
         private void DtCreate(List<Teacher> tchList)
@@ -95,30 +95,30 @@ namespace grid
             dt.Columns.Add("Street");
             dt.Columns.Add("House");
 
-            
+
             foreach (Teacher i in tchList)
             {
                 dt.Rows.Add(i.Name, i.Surname, i.Age, i.ID, i.Limit, i.Adress.Country, i.Adress.City, i.Adress.Street, i.Adress.HouseNumber);
-                
+
             }
             dataGridView2.DataSource = dt;
 
-            for (int i = 0; i < DataTranformer.teacherList.Count; i++) 
+            for (int i = 0; i < DataTranformer.teacherList.Count; i++)
             {
-                
+
                 if (DataTranformer.teacherList[i].StudentList.Count < Convert.ToInt32(dataGridView2.Rows[i].Cells[4].Value.ToString()))
                 {
                     dataGridView2.Rows[i].Cells[4].Style.BackColor = Color.Green;
                 }
-                else 
+                else
                 {
                     dataGridView2.Rows[i].Cells[4].Style.BackColor = Color.Red;
                 }
             }
         }
-        
 
-        public void TreeCreate() 
+
+        public void TreeCreate()
         {
             treeView1.Nodes.Clear();
             TreeNode root = new TreeNode
@@ -129,10 +129,10 @@ namespace grid
 
             treeView1.Nodes.Add(root);
 
-            for(int i = 0; i < DataTranformer.teacherList.Count; i++)
+            for (int i = 0; i < DataTranformer.teacherList.Count; i++)
             {
                 treeView1.Nodes[0].Nodes.Add(DataTranformer.teacherList[i].Name + " " + DataTranformer.teacherList[i].Surname);
-                for(int j = 0; j < DataTranformer.teacherList[i].StudentList.Count(); j++)
+                for (int j = 0; j < DataTranformer.teacherList[i].StudentList.Count(); j++)
                 {
                     List<Student> lst = DataTranformer.teacherList[i].StudentList;
 
@@ -142,7 +142,7 @@ namespace grid
             treeView1.ExpandAll();
         }
 
-        private void ComboBoxCreate() 
+        private void ComboBoxCreate()
         {
             comboBox1.Text = "";
             comboBox1.Items.Clear();
@@ -152,7 +152,7 @@ namespace grid
             }
         }
 
-        private void SaveTeachers() 
+        private void SaveTeachers()
         {
             File.WriteAllText(DataTranformer.saveDir, JsonConvert.SerializeObject(DataTranformer.teacherList));
         }
@@ -188,10 +188,10 @@ namespace grid
         private void ButtonRefresh_Click(object sender, EventArgs e)
         {
             RefreshData();
-            
+
         }
 
-        private void RefreshData() 
+        private void RefreshData()
         {
             ChartCreate(DataTranformer.teacherList);
             TreeCreate();
@@ -199,27 +199,33 @@ namespace grid
             DtCreate(DataTranformer.teacherList);
             List<Student> std = new List<Student>();
             DtCreate(std);
+            studentGrid(DataTranformer.name);
         }
-        
+
+        private void studentGrid(string n)
+        {
+            List<Student> stdLst;
+
+            for (int i = 0; i < DataTranformer.teacherList.Count; i++)
+            {
+                string Na = DataTranformer.teacherList[i].Name + " " + DataTranformer.teacherList[i].Surname;
+                if (Na == n)
+                {
+                    Teacher tch = DataTranformer.teacherList[i];
+                    stdLst = DataTranformer.teacherList[i].StudentList;
+                    ChartCreate(tch);
+                    DtCreate(stdLst);
+                }
+            }
+
+        }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             try
             {
                 string n = comboBox1.SelectedItem.ToString();
-                List<Student> stdLst;
-
-                for (int i = 0; i < DataTranformer.teacherList.Count; i++)
-                {
-                    string Na = DataTranformer.teacherList[i].Name + " " + DataTranformer.teacherList[i].Surname;
-                    if (Na == n)
-                    {
-                        Teacher tch = DataTranformer.teacherList[i];
-                        stdLst = DataTranformer.teacherList[i].StudentList;
-                        ChartCreate(tch);
-                        DtCreate(stdLst);
-                    }
-                }
+                studentGrid(n);
             }
             catch { MessageBox.Show("Error"); }
         }

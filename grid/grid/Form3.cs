@@ -58,6 +58,7 @@ namespace grid
                     if (n == Na)
                     {
                         DataTranformer.teacherList[i].AddStudent(std);
+                        DataTranformer.name = n;
                         MessageBox.Show("Added student");
                     }
                 }

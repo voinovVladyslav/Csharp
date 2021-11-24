@@ -93,3 +93,4 @@ D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.csproj.CoreCompileInputs.cache
 D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.csproj.CopyComplete
 D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.exe
 D:\voinov 241\Csharp\grid\grid\obj\Debug\grid.pdb
+D:\voinov\Csharp\grid\grid\obj\Debug\grid.Form7.resources
